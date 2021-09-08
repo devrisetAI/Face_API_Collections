@@ -15,7 +15,7 @@ description: >-
 
 ### **Description**
 
-This endpoint is used to perform operations related to accounts in **AuthTenant**. For now, this functionality is limited to **Accesstoken** requests. 
+This endpoint is used to perform operations related to accounts in **AuthTenant**. For now, this functionality is limited to **Accesstoken** requests.
 
 Will generate a new **Accesstoken** every time it gets a request, it is recommended to take notes.
 
@@ -52,10 +52,9 @@ Will generate a new **Accesstoken** every time it gets a request, it is recommen
 
 ### **Description**
 
-This endpoint is used to revoke the previously generated **Accesstoken**. **Accesstoken** will be added to the Blacklist list. 
+This endpoint is used to revoke the previously generated **Accesstoken**. **Accesstoken** will be added to the Blacklist list.
 
-Used if **Accesstoken** leaked to other party, and want to revoke the authorization  
-
+Used if **Accesstoken** leaked to other party, and want to revoke the authorization
 
 ### **Request**
 
