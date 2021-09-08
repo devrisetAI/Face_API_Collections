@@ -1,9 +1,7 @@
 # Contact Person
 
 > **PiC**
-
-Name: Thariq Ramadhan
-
+> Name: Thariq Ramadhan
 > Email : thariqramadhan@riset.ai
 
 
