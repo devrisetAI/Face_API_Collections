@@ -2,32 +2,37 @@
 description: This section contains the API used to face verification and recognition.
 ---
 
-# Face Verification API
+# Face API
 
 ## **Client Endpoints**
-<br>
 
 ### **POST `/client/register`**
 
 This API registers a client to the database.
 
 ### **Request**
+
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Accesstoken**   | `oauth Accesstoken        `|
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Accesstoken** | `oauth Accesstoken` |
+
 #### **`Body`**
-+ `None`
+
+* `None`
 
 ### **Response**
+
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Content-Type**  | `application/json`    |
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
     "status":           "200",
     "status_message":   "Success",
@@ -40,29 +45,34 @@ This API registers a client to the database.
 | `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `facegallery_id` | `string` | Name of facegallery |
-<br>
 
 ### **POST `/client/delete`**
 
 This API deletes the client from the database.
 
 ### **Request**
+
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Accesstoken**   | `oauth Accesstoken        `|
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Accesstoken** | `oauth Accesstoken` |
+
 #### **`Body`**
-+ `None`
+
+* `None`
 
 ### **Response**
+
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Content-Type**  | `application/json`    |
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
     "status":           "200",
     "status_message":   "Success",
@@ -78,33 +88,37 @@ This API deletes the client from the database.
 | `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `status_message` | `string` | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md) |
 | `face_galleryid` | `list` | List of remaining facegallery |
-<br>
 
 ## **Facegallery Endpoints**
-<br>
 
 ### **GET `/facegallery/my-facegalleries`**
+
 ### **Request**
+
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Accesstoken**   | `oauth Accesstoken        `|
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
-+ `None`
+
+* `None`
 
 ### **Response**
+
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Content-Type**  | `application/json`    |
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "status":           "200",
-  "status_message":   "Success",
+  "status_message":   "Success - FaceGalleries Listed",
   "facegallery_id": [
       "riset.ai@trial",
       "riset.ai@production"
@@ -117,7 +131,6 @@ This API deletes the client from the database.
 | `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `facegallery_id` | `list` | List of facegallery |
-<br>
 
 ### **POST `/facegallery/create-facegallery`**
 
@@ -126,13 +139,14 @@ This API create the new of face gallery.
 #### **Request**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Accesstoken**   | `oauth Accesstoken        `|
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "facegallery_id":   "riset.ai@production",
   "trx_id":           "alphanumericalstring1234"
@@ -147,13 +161,14 @@ This API create the new of face gallery.
 #### **Response**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Content-Type**  | `application/json`    |
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "status":           "200",
   "status_message":   "Success",
@@ -166,7 +181,6 @@ This API create the new of face gallery.
 | `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `facegallery_id` | `string` | Name of facegallery |
-<br>
 
 ### **DELETE `/facegallery/delete-facegallery`**
 
@@ -175,13 +189,14 @@ This API deletes a facegallery.
 #### **Request**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Accesstoken**   | `oauth Accesstoken        `|
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "facegallery_id": "riset.ai@production",
   "trx_id":         "alphanumericalstring1234"
@@ -196,13 +211,14 @@ This API deletes a facegallery.
 #### **Response**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Content-Type**  | `application/json`    |
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "status":           "200",
   "status_message":   "Success",
@@ -215,10 +231,8 @@ This API deletes a facegallery.
 | `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `facegallery_id` | `string` | Name of deleted facegallery |
-<br>
 
 ## **User Endpoints**
-<br>
 
 ### **POST `/facegallery/enroll-face`**
 
@@ -227,13 +241,14 @@ This API registers an user to the database.
 #### **Request**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Accesstoken**   | `oauth Accesstoken        `|
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "user_id":          "risetai1234",
   "user_name":        "RisetAi Username1",
@@ -254,13 +269,14 @@ This API registers an user to the database.
 #### **Response**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Content-Type**  | `application/json`    |
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "status":           "200",
   "status_message":   "Success"
@@ -271,7 +287,6 @@ This API registers an user to the database.
 | :--- | :--- | :--- |
 | `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `status_message` | `string` | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md) |
-<br>
 
 ### **GET `/facegallery/list-faces`**
 
@@ -280,13 +295,14 @@ This API gives a list of the registered user.
 #### **Request**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Accesstoken**   | `oauth Accesstoken        `|
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "facegallery_id": "riset.ai@production",
   "trx_id":         "alphanumericalstring1234"
@@ -301,13 +317,14 @@ This API gives a list of the registered user.
 #### **Response**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Content-Type**  | `application/json`    |
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "status":           "200",
   "status_message":   "Success",
@@ -329,7 +346,6 @@ This API gives a list of the registered user.
 | `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `faces` | `list` | List of registered user |
-<br>
 
 ### **POST `/facegallery/verify-face`**
 
@@ -338,13 +354,14 @@ This API verifies an user\_id and an image with a registered user.
 #### **Request**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Accesstoken**   | `oauth Accesstoken        `|
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "user_id":          "risetai1234",
   "facegallery_id":   "riset.ai@production",
@@ -363,13 +380,14 @@ This API verifies an user\_id and an image with a registered user.
 #### **Response**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Content-Type**  | `application/json`    |
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "status":           "200",
   "status_message":   "Success",
@@ -388,7 +406,6 @@ This API verifies an user\_id and an image with a registered user.
 | `similarity` | `float` | Describe the comparison of facial similarities, scale 0.0 to 1.0 \(from 0% to 100% similar\) |
 | `masker` | `boolean` | If a person’s face wearing a mask, will return True, else return False |
 | `verified` | `boolean` | If similarity above set config parameter\(eg. threshold = 0.75\), return True, else return False |
-<br>
 
 ### **POST `/facegallery/recognize-face`**
 
@@ -397,13 +414,14 @@ This API recognize an image with a registered user.
 #### **Request**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Accesstoken**   | `oauth Accesstoken        `|
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "facegallery_id":   "riset.ai@production",
   "image":            "/9j/4AAQSkZJRgABAQEASABIAAD/4QBMRXhpZgAA...",
@@ -420,13 +438,14 @@ This API recognize an image with a registered user.
 #### **Response**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Content-Type**  | `application/json`    |
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "status":               "200",
   "status_message":       "Success",
@@ -450,7 +469,6 @@ This API recognize an image with a registered user.
 | `mask` | `boolean` | If a person’s face wearing a mask, will return True, else return False |
 | `user_id` | `string` | Unique user identifier, alphanumeric \(eg. \#NIK\) |
 | `user_name` | `string` | The name of the person who has the `user_id` |
-<br>
 
 ### **DELETE `/facegallery/delete-face`**
 
@@ -459,13 +477,14 @@ This API deletes a user.
 #### **Request**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Accesstoken**   | `oauth Accesstoken        `|
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "user_id":        "risetai1234",
   "facegallery_id": "riset.ai@production",
@@ -482,13 +501,14 @@ This API deletes a user.
 #### **Response**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Content-Type**  | `application/json`    |
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "status":         "200",
   "status_message": "Success"
@@ -499,7 +519,6 @@ This API deletes a user.
 | :--- | :--- | :--- |
 | `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
-<br>
 
 ### **POST `/compare-images`**
 
@@ -508,13 +527,14 @@ This API compares the two images to determine if they are verified or not. This 
 #### **Request**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Accesstoken**   | `oauth Accesstoken        `|
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "source_image": "/9j/4AAQSkZJRgABAQEASABIAAD/4QBMRXhpZgAA...",
   "target_image": "/9j/4AAQSkZJRgABAQEASABIAAD/389sdAxcZisA...",
@@ -531,13 +551,14 @@ This API compares the two images to determine if they are verified or not. This 
 #### **Response**
 
 #### **`Headers`**
-| KEY               | VALUE                 |
-| :---              | :---                  |
-| **Content-Type**  | `application/json`    |
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "status":         "200",
   "status_message": "Success",
@@ -554,3 +575,4 @@ This API compares the two images to determine if they are verified or not. This 
 | `similarity` | `float` | Describe the comparison of facial similarities, scale 0.0 to 1.0 \(from 0% to 100% similar\) |
 | `verified` | `boolean` | If similarity above set config parameter\(eg. threshold = 0.75\), return True, else return False |
 | `masker` | `boolean` | If a person’s face wearing a mask, will return True, else return False |
+

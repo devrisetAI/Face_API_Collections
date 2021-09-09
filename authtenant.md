@@ -31,25 +31,24 @@ Will generate a new **Accesstoken** every time it gets a request, it is recommen
 
 | KEY | VALUE |
 | :--- | :--- |
-| **client_id** | `riset.ai` |
+| **client\_id** | `riset.ai` |
 | **password** | `#password` |
 
 ### **Response**
 
 #### **`Headers`**
+
 | KEY | VALUE |
 | :--- | :--- |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsIn..."
 }
 ```
-<br>
-
 
 ## **2. POST `/token/revoke`**
 
@@ -79,13 +78,14 @@ Used if **Accesstoken** leaked to other party, and want to revoke the authorizat
 ### **Response**
 
 #### **`Headers`**
+
 | KEY | VALUE |
 | :--- | :--- |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
 
-```json
+```javascript
 {
   "status_message": "Success Revoke Token"
 }

@@ -6,8 +6,7 @@ description: >-
 
 # Face Riset.ai
 
-GitBook URI: https://app.gitbook.com/@risetai/s/face-docs/apis/face-api
-![](.gitbook/assets/risetai_logo.72c56424.png)
+GitBook URI: [https://app.gitbook.com/@risetai/s/face-docs/apis/face-api](https://app.gitbook.com/@risetai/s/face-docs/apis/face-api) ![](.gitbook/assets/risetai_logo.72c56424.png)
 
 > ### _Our face products use models based on locally developed data sets. These models are perfect solutions for seamless non-contact authentication. This technology can be integrated with other authentication factors and authentication mechanisms, creating a multimodal verification technique._
 
@@ -15,13 +14,9 @@ GitBook URI: https://app.gitbook.com/@risetai/s/face-docs/apis/face-api
 
 {% page-ref page="authtenant.md" %}
 
-
-
 ## APIs
 
 {% page-ref page="apis/base-url.md" %}
-
-{% page-ref page="apis/fv-api.md" %}
 
 {% page-ref page="apis/face-verification-x-pedulilindungi.md" %}
 
@@ -32,6 +27,4 @@ GitBook URI: https://app.gitbook.com/@risetai/s/face-docs/apis/face-api
 {% page-ref page="others/postman-setting.md" %}
 
 {% page-ref page="others/contat-person.md" %}
-
-
 
