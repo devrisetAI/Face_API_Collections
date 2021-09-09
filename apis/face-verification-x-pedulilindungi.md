@@ -14,13 +14,14 @@ This API registers an user to the database.
 
 ### **Request**
 
-#### Headers
+#### **`Headers`**
+| KEY               | VALUE                 |
+| :---              | :---                  |
+| **Accesstoken**   | `oauth Accesstoken        `|
 
-* `Accesstoken`
+#### **`Body`**
 
-**Body**
-
-```javascript
+```json
 {
   "nik":              "3273022807762",
   "user_name":        "RisetAi Username1",
@@ -40,16 +41,17 @@ This API registers an user to the database.
 
 ### **Response**
 
-#### Headers
+#### **`Headers`**
+| KEY               | VALUE                 |
+| :---              | :---                  |
+| **Content-Type**  | `application/json`    |
 
-* `Content-Type "application/json"`
+#### **`Body`**
 
-**Body**
-
-```javascript
+```json
 {
   "status":           "200",
-  "status_message":   "Success"
+  "status_message":   "Success",
   "pl_data": {
         "success": true,
         "code": 200,
@@ -64,7 +66,7 @@ This API registers an user to the database.
 | `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `status_message` | `string` | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md) |
 | `pl_data` | `list` | PeduliLindungi API response for registration, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
-
+<br>
 
 
 ## **POST `/pedulilindungi/list-faces`**
@@ -73,13 +75,14 @@ This API gives a list of the registered user.
 
 ### **Request**
 
-#### Headers
+#### **`Headers`**
+| KEY               | VALUE                 |
+| :---              | :---                  |
+| **Accesstoken**   | `oauth Accesstoken        `|
 
-* `Accesstoken`
+#### **`Body`**
 
-**Body**
-
-```javascript
+```json
 {
   "facegallery_id": "riset.ai@production",
   "trx_id":         "alphanumericalstring1234"
@@ -93,13 +96,14 @@ This API gives a list of the registered user.
 
 ### **Response**
 
-#### Headers
+#### **`Headers`**
+| KEY               | VALUE                 |
+| :---              | :---                  |
+| **Content-Type**  | `application/json`    |
 
-* `Content-Type "application/json"`
+#### **`Body`**
 
-**Body**
-
-```javascript
+```json
 {
   "status":           "200",
   "status_message":   "Success",
@@ -121,6 +125,7 @@ This API gives a list of the registered user.
 | `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `faces` | `list` | List of registered user |
+<br>
 
 ## **POST `/pedulilindungi/verify-checkin-checkout`**
 
@@ -128,17 +133,18 @@ This API verifies an image with a registered user.
 
 ### **Request**
 
-#### Headers
+#### **`Headers`**
+| KEY               | VALUE                 |
+| :---              | :---                  |
+| **Accesstoken**   | `oauth Accesstoken        `|
 
-* `Accesstoken`
+#### **`Body`**
 
-**Body**
-
-```javascript
+```json
 {
   "qrCode":           "checkin:60dd9e2bac68e40011056662",
   "latitude":         -8.068494,
-  "longitude":        111.8992385
+  "longitude":        111.8992385,
   "nik":              "3273022807762",
   "facegallery_id":   "riset.ai@production",
   "image":            "/9j/4AAQSkZJRgABAQEASABIAAD/4QBMRXhpZgAA...",
@@ -158,13 +164,14 @@ This API verifies an image with a registered user.
 
 ### **Response**
 
-#### Headers
+#### **`Headers`**
+| KEY               | VALUE                 |
+| :---              | :---                  |
+| **Content-Type**  | `application/json`    |
 
-* `Content-Type "application/json"`
+#### **`Body`**
 
-**Body**
-
-```javascript
+```json
 {
  "status":        "200",
  "status_message":"Success",
@@ -187,6 +194,7 @@ This API verifies an image with a registered user.
 | `verified` | `boolean` | If similarity above set config parameter\(eg. threshold = 0.75\), return True, else return False |
 | `user_status` | `string` | Status from PeduliLindungi API, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
 | `pl_data` | `string` | PeduliLindungi API response for check-in check-out, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
+<br>
 
 ## **DELETE `/pedulilindungi/delete-face`**
 
@@ -194,13 +202,14 @@ This API deletes a user.
 
 ### **Request**
 
-#### Headers
+#### **`Headers`**
+| KEY               | VALUE                 |
+| :---              | :---                  |
+| **Accesstoken**   | `oauth Accesstoken        `|
 
-* `Accesstoken`
+#### **`Body`**
 
-**Body**
-
-```javascript
+```json
 {
   "nik":            "3273022807762",
   "facegallery_id": "riset.ai@production",
@@ -216,13 +225,14 @@ This API deletes a user.
 
 ### **Response**
 
-#### Headers
+#### **`Headers`**
+| KEY               | VALUE                 |
+| :---              | :---                  |
+| **Content-Type**  | `application/json`    |
 
-* `Content-Type "application/json"`
+#### **`Body`**
 
-**Body**
-
-```javascript
+```json
 {
   "status":         "200",
   "status_message": "Success"
