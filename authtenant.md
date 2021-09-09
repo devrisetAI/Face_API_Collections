@@ -21,32 +21,35 @@ Will generate a new **Accesstoken** every time it gets a request, it is recommen
 
 ### **Request**
 
-#### Headers
+#### **`Headers`**
 
 * `None`
 
-**Body**
+#### **`Body`**
 
 * `x-www-form-urlencoded`
 
 | KEY | VALUE |
 | :--- | :--- |
-| **client\_id** | `riset.ai` |
+| **client_id** | `riset.ai` |
 | **password** | `#password` |
 
 ### **Response**
 
-#### Headers
+#### **`Headers`**
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
-* `Content-Type "application/json"`
+#### **`Body`**
 
-**Body**
-
-```javascript
+```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsIn..."
 }
 ```
+<br>
+
 
 ## **2. POST `/token/revoke`**
 
@@ -58,11 +61,11 @@ Used if **Accesstoken** leaked to other party, and want to revoke the authorizat
 
 ### **Request**
 
-#### Headers
+#### **`Headers`**
 
 | KEY | VALUE |
 | :--- | :--- |
-| **Accesstoken** | `access token` |
+| **Accesstoken** | `oauth Accesstoken` |
 
 #### Body
 
@@ -71,17 +74,18 @@ Used if **Accesstoken** leaked to other party, and want to revoke the authorizat
 | KEY | VALUE |
 | :--- | :--- |
 | **client\_id** | `riset.ai` |
-| **password** | `#hashed-password` |
+| **password** | `#password` |
 
 ### **Response**
 
-#### Headers
+#### **`Headers`**
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
 
-* `Content-Type "application/json"`
+#### **`Body`**
 
-**Body**
-
-```javascript
+```json
 {
   "status_message": "Success Revoke Token"
 }
