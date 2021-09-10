@@ -1,7 +1,7 @@
 ---
 description: >-
-  All users of the Riset.ai API must register using the method described in this
-  document.
+  Version 1.0. 7 September 2021. All users of the Riset.ai API must register
+  using the method described in this document.
 ---
 
 # AuthTenant

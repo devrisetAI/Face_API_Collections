@@ -349,7 +349,7 @@ This API gives a list of the registered user.
 
 ### **POST `/facegallery/verify-face`**
 
-This API verifies an user\_id and an image with a registered user.
+This API verifies an user\_id and an image with a registered user or it do 1:1 authentication.
 
 #### **Request**
 
@@ -409,7 +409,7 @@ This API verifies an user\_id and an image with a registered user.
 
 ### **POST `/facegallery/recognize-face`**
 
-This API recognize an image with a registered user.
+This API recognize an image with a registered user or it do 1:N authentication..
 
 #### **Request**
 

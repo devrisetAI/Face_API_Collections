@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Face Riset.ai](README.md)
+* [Face AI at Riset.ai](README.md)
 * [Getting Started](getting-started.md)
 * [AuthTenant](authtenant.md)
 * [APIs](apis/README.md)
