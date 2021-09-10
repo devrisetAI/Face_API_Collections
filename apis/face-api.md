@@ -10,7 +10,7 @@ description: This section contains the API used to face verification and recogni
 
 This API registers a client to the database.
 
-#### **Request**
+### **Request**
 
 #### **`Headers`**
 
@@ -22,7 +22,7 @@ This API registers a client to the database.
 
 * `None`
 
-#### **Response**
+### **Response**
 
 #### **`Headers`**
 
@@ -50,7 +50,7 @@ This API registers a client to the database.
 
 This API deletes the client from the database.
 
-#### **Request**
+### **Request**
 
 #### **`Headers`**
 
@@ -62,7 +62,7 @@ This API deletes the client from the database.
 
 * `None`
 
-#### **Response**
+### **Response**
 
 #### **`Headers`**
 
@@ -93,7 +93,7 @@ This API deletes the client from the database.
 
 ### **GET `/facegallery/my-facegalleries`**
 
-#### **Request**
+### **Request**
 
 #### **`Headers`**
 
@@ -105,7 +105,7 @@ This API deletes the client from the database.
 
 * `None`
 
-#### **Response**
+### **Response**
 
 #### **`Headers`**
 
@@ -349,7 +349,7 @@ This API gives a list of the registered user.
 
 ### **POST `/facegallery/verify-face`**
 
-This API verifies an user\_id and an image with a registered user or it do 1:1 authentication.
+This API verifies an user\_id and an image with a registered user.
 
 #### **Request**
 
@@ -409,7 +409,7 @@ This API verifies an user\_id and an image with a registered user or it do 1:1 a
 
 ### **POST `/facegallery/recognize-face`**
 
-This API recognize an image with a registered user or it do 1:N authentication..
+This API recognize an image with a registered user.
 
 #### **Request**
 

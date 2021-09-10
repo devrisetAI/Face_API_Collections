@@ -2,7 +2,7 @@
 
 ## 1. Get client\_id and password
 
-Fell free contact Person in Charge in [here ](others/contat-person.md)to get `client_id` and `password` .
+Fell free contact Person in Charge in [here ](others/contat-person.md)to get new `client_id` and `password` .
 
 ## 2. Get Accestoken
 
