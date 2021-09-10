@@ -10,6 +10,10 @@ description: >-
 
 > ### _Our face products use models based on locally developed data sets. These models are perfect solutions for seamless non-contact authentication. This technology can be integrated with other authentication factors and authentication mechanisms, creating a multimodal verification technique._
 
+## Getting Started
+
+{% page-ref page="getting-started.md" %}
+
 ## AuthTenant
 
 {% page-ref page="authtenant.md" %}
@@ -18,7 +22,11 @@ description: >-
 
 {% page-ref page="apis/base-url.md" %}
 
+{% page-ref page="apis/face-api.md" %}
+
 {% page-ref page="apis/face-verification-x-pedulilindungi.md" %}
+
+
 
 ## Others
 
