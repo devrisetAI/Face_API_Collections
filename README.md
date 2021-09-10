@@ -4,7 +4,7 @@ description: >-
   artificial intelligence algorithm, most of the people will call it life.
 ---
 
-# Face Riset.ai
+# Face AI at Riset.ai
 
 ![](.gitbook/assets/risetai_logo.72c56424.png)
 
