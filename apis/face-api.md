@@ -407,7 +407,7 @@ This API verifies an user\_id and an image with a registered user or it do 1:1 a
 | `masker` | `boolean` | If a person’s face wearing a mask, will return True, else return False |
 | `verified` | `boolean` | If similarity above set config parameter\(eg. threshold = 0.75\), return True, else return False |
 
-### **POST `/facegallery/recognize-face`**
+### **POST `/facegallery/identify-face`**
 
 This API recognize an image with a registered user or it do 1:N authentication..
 
