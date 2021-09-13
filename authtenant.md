@@ -11,7 +11,7 @@ description: >-
 > [https://riset.luqmanr.xyz/oauth](https://riset.luqmanr.xyz/oauth) \(priority\) [  
 > https://api.riset.ai/oauth](https://api.riset.ai/api/oauth)
 
-## **1. POST `/client/login`**
+## **1. POST `/client/token`**
 
 ### **Description**
 
