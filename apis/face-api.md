@@ -409,7 +409,7 @@ This API verifies an user\_id and an image with a registered user or it do 1:1 a
 
 ### **POST `/facegallery/identify-face`**
 
-This API recognize an image with a registered user or it do 1:N authentication..
+This API identify an image with a registered user or it do 1:N authentication..
 
 #### **Request**
 
