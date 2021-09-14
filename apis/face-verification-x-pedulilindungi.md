@@ -1,10 +1,10 @@
 ---
 description: >-
   This section contains the API that integrates with PeduliLindungi for face
-  verification.
+  recognition.
 ---
 
-# Face Verification X PeduliLindungi API
+# Face X PeduliLindungi API
 
 ![](../.gitbook/assets/screenshot-2021-09-06-at-16-24-48-face-verification-x-pedulilindungi-api-client-docs-hackmd.png)
 
@@ -144,7 +144,7 @@ This API verifies an image with a registered user.
 
 ```javascript
 {
-  "qrCode":           "checkin:60dd9e2bac68e40011056662",
+  "qr_code":          "checkin:60dd9e2bac68e40011056662",
   "latitude":         -8.068494,
   "longitude":        111.8992385,
   "nik":              "3273022807762",
@@ -156,7 +156,7 @@ This API verifies an image with a registered user.
 
 | Key | Type | Description |
 | :--- | :--- | :--- |
-| `qrCode` | `string` | Value scanned QRCode, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
+| `qr_code` | `string` | Value scanned QRCode, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
 | `latitude` | `float` | Latitude of QRCode, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
 | `longitude` | `float` | Longitude of QRCode, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
 | `nik` | `string` | NIK number in KTP \(must be exactly the same\) |
@@ -188,14 +188,79 @@ This API verifies an image with a registered user.
 }
 ```
 
+
+
+## **POST `/pedulilindungi/identify-checkin-checkout`**
+
+This API identify an image with a registered user.
+
+### **Request**
+
+#### **`Headers`**
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Accesstoken** | `oauth Accesstoken` |
+
+#### **`Body`**
+
+```javascript
+{
+  "qr_code":          "checkin:60dd9e2bac68e40011056662",
+  "latitude":         -8.068494,
+  "longitude":        111.8992385,
+  "facegallery_id":   "riset.ai@production",
+  "image":            "/9j/4AAQSkZJRgABAQEASABIAAD/4QBMRXhpZgAA...",
+  "trx_id":           "alphanumericalstring1234",
+}
+```
+
+| Key | Type | Description |
+| :--- | :--- | :--- |
+| `qr_code` | `string` | Value scanned QRCode, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
+| `latitude` | `float` | Latitude of QRCode, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
+| `longitude` | `float` | Longitude of QRCode, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
+| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric \(eg. LocationName, CompanyName, etc\) |
+| `image` | `string` | Base64 encoded JPG or PNG image |
+| `trx_id` | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
+
+### **Response**
+
+#### **`Headers`**
+
+| KEY | VALUE |
+| :--- | :--- |
+| **Content-Type** | `application/json` |
+
+#### **`Body`**
+
+```javascript
+{
+  "status":               "200",
+  "status_message":       "Success",
+  "status_description":   "Face Recognition Success",
+  "return": [
+      {
+          "confidence_level": "0.943697",
+          "mask":             "true",
+          "user_id":          "risetai1234",
+          "user_name":        "RisetAi Username1"
+      }
+  ],
+ "pl_data":    { 
+               ...
+               }
+}
+```
+
 | Key | Type | Description |
 | :--- | :--- | :--- |
 | `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List Status Code](../others/list-of-status-code.md) |
-| `similarity` | `float` | Describe the comparison of facial similarities, scale 0.0 to 1.0 \(from 0% to 100% similar\) |
-| `masker` | `boolean` | If a person’s face wearing a mask, will return True, else return False |
-| `verified` | `boolean` | If similarity above set config parameter\(eg. threshold = 0.75\), return True, else return False |
-| `user_status` | `string` | Status from PeduliLindungi API, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
+| `confidence_level` | `float` | Describe confidence of model, scale 0.0 to 1.0 \(from 0% to 100% confidence\) |
+| `mask` | `boolean` | If a person’s face wearing a mask, will return True, else return False |
+| `user_id` | `string` | Unique user identifier, alphanumeric \(eg. \#NIK\) |
+| `user_name` | `string` | The name of the person who has the `user_id` |
 | `pl_data` | `string` | PeduliLindungi API response for check-in check-out, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
 
 ## **DELETE `/pedulilindungi/delete-face`**
