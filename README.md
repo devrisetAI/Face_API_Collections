@@ -24,7 +24,7 @@ description: >-
 
 {% page-ref page="apis/face-api.md" %}
 
-{% page-ref page="apis/face-verification-x-pedulilindungi.md" %}
+{% page-ref page="apis/face-x-pedulilindungi.md" %}
 
 
 

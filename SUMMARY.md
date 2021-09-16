@@ -6,7 +6,7 @@
 * [APIs](apis/README.md)
   * [API Base URL](apis/base-url.md)
   * [Face API](apis/face-api.md)
-  * [Face X PeduliLindungi API](apis/face-verification-x-pedulilindungi.md)
+  * [Face X PeduliLindungi API](apis/face-x-pedulilindungi.md)
 * [Others](others/README.md)
   * [List of Status Code](others/list-of-status-code.md)
   * [Tutorial for Hitting API with Postman](others/postman-setting.md)
