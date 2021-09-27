@@ -2,6 +2,11 @@
 
 * [Face AI at Riset.ai](README.md)
 * [Getting Started](getting-started.md)
+* [Foundation](foundation/README.md)
+  * [Face Identification](foundation/face-identification.md)
+  * [Face Verification](foundation/face-verification.md)
+  * [Reference Image Requirements](foundation/reference-image-requirements.md)
+  * [Device Set-Up Requirements](foundation/device-set-up-requirements.md)
 * [AuthTenant](authtenant.md)
 * [APIs](apis/README.md)
   * [API Base URL](apis/base-url.md)
