@@ -8,6 +8,7 @@ There are several constraints set in order to obtain an optimal performance:
 
 * The camera is placed in a hallway with a  minimum length of 3 meters.
 * Users are not allowed to wear face attributes other than eyeglasses or a mask.
+* If there is a recognition failure when the user is wearing glasses or a mask, the user is expected to take off the glasses or mask in order to provide more features for recognition.
 * Users’ face needs to be evenly illuminated.
 * Users need to walk at an average walking pace.
 
