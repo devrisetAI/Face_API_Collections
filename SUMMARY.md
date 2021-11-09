@@ -12,6 +12,7 @@
   * [API Base URL](apis/base-url.md)
   * [Face API](apis/face-api.md)
   * [Face X PeduliLindungi API](apis/face-x-pedulilindungi.md)
+  * [Liveness Prototype API](apis/liveness-api.md)
 * [Others](others/README.md)
   * [List of Status Code](others/list-of-status-code.md)
   * [Tutorial for Hitting API with Postman](others/postman-setting.md)
