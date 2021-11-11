@@ -164,7 +164,7 @@ This API verifies an image with a registered user.
 | `facegallery_id`           | `string`  | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc)                                                                                        |
 | `image`                    | `string`  | Base64 encoded JPG or PNG image                                                                                                                                         |
 | `trx_id`                   | `string`  | Unique transaction identifier, for transaction logging and debugging purposes                                                                                           |
-| `minimum_confidence_level` | `float64` | Requested minimum confidence\_lv threshold, for requesting PL API, is optional                                                                                          |
+| `minimum_confidence_level` | `float64` | Requested minimum confidence\_lv threshold, for requesting PL API, **this is optional**                                                                                 |
 
 ### **Response**
 
@@ -224,7 +224,7 @@ This API identifies an image with a registered user.
 | `facegallery_id`           | `string`  | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc)                                                                                        |
 | `image`                    | `string`  | Base64 encoded JPG or PNG image                                                                                                                                         |
 | `trx_id`                   | `string`  | Unique transaction identifier, for transaction logging and debugging purposes                                                                                           |
-| `minimum_confidence_level` | `float64` | Requested minimum confidence\_lv threshold, for requesting PL API, **is optional**                                                                                      |
+| `minimum_confidence_level` | `float64` | Requested minimum confidence\_lv threshold, for requesting PL API, **this is optional**                                                                                 |
 
 ### **Response**
 

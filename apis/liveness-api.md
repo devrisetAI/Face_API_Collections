@@ -35,17 +35,17 @@ This API predicts liveness of face from two type active and passive. Given a req
 }
 ```
 
-| Key                     | Type     | Description                                                                                                                                                          |
-| ----------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `user_id`               | `string` | Unique User/Face Identifier, **is optional** (paired with `facegallery_id`)                                                                                          |
-| `facegallery_id`        | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc), **is optional** (paired with `user_id`)                                            |
-| `image`                 | `string` | Base64 encoded JPG or PNG image                                                                                                                                      |
-| `trx_id`                | `string` | Unique transaction identifier, for transaction logging and debugging purposes                                                                                        |
-| `face_parameters`       | `array`  | contains requested parameters to match with API prediction, at least `one` `parameter` is needed                                                                     |
-| `face_parameters.angle` | `string` | "left" or "right", API will predict if the input `image` is the facing `left` or `right`, **is optional**                                                            |
-| `face_parameters.spoof` | `string` | "strict" or "loose", API will predict if the input `image` contains REAL face or not. `strict` for stricter threshold, and `loose` for the opposite, **is optional** |
-| `face_parameters.eyes`  | `string` | "open" or "closed", API will predict if the input `image` contains a face with `open` or `closed` eyes, **is optional**                                              |
-| `face_parameters.mouth` | `string` | "open" or "closed", API will predict if the input `image` contains a face with `open` or `closed` mouth, **is optional**                                             |
+| Key                     | Type     | Description                                                                                                                                                               |
+| ----------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `user_id`               | `string` | Unique User/Face Identifier, **this is optional** (paired with `facegallery_id`)                                                                                          |
+| `facegallery_id`        | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc), **this** **is optional** (paired with `user_id`)                                        |
+| `image`                 | `string` | Base64 encoded JPG or PNG image                                                                                                                                           |
+| `trx_id`                | `string` | Unique transaction identifier, for transaction logging and debugging purposes                                                                                             |
+| `face_parameters`       | `array`  | contains requested parameters to match with API prediction, at least `one` `parameter` is needed                                                                          |
+| `face_parameters.angle` | `string` | "left" or "right", API will predict if the input `image` is the facing `left` or `right`, **this is optional**                                                            |
+| `face_parameters.spoof` | `string` | "strict" or "loose", API will predict if the input `image` contains REAL face or not. `strict` for stricter threshold, and `loose` for the opposite, **this is optional** |
+| `face_parameters.eyes`  | `string` | "open" or "closed", API will predict if the input `image` contains a face with `open` or `closed` eyes, **this is optional**                                              |
+| `face_parameters.mouth` | `string` | "open" or "closed", API will predict if the input `image` contains a face with `open` or `closed` mouth, **this is optional**                                             |
 
 ### **Response**
 
