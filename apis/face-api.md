@@ -14,8 +14,8 @@ This API registers a client to the database.
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY             | VALUE               |
+| --------------- | ------------------- |
 | **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
@@ -26,8 +26,8 @@ This API registers a client to the database.
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -40,11 +40,11 @@ This API registers a client to the database.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| Key              | Type     | Description                                                                                                    |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
-| `facegallery_id` | `string` | Name of facegallery |
+| `facegallery_id` | `string` | Name of facegallery                                                                                            |
 
 ### **POST `/client/delete`**
 
@@ -54,8 +54,8 @@ This API deletes the client from the database.
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY             | VALUE               |
+| --------------- | ------------------- |
 | **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
@@ -66,8 +66,8 @@ This API deletes the client from the database.
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -83,22 +83,24 @@ This API deletes the client from the database.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| Key              | Type     | Description                                                                                                    |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md) |
-| `face_galleryid` | `list` | List of remaining facegallery |
+| `face_galleryid` | `list`   | List of remaining facegallery                                                                                  |
 
 ## **Facegallery Endpoints**
 
 ### **GET `/facegallery/my-facegalleries`**
 
+This API gives the list of facegallery.
+
 #### **Request**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY             | VALUE               |
+| --------------- | ------------------- |
 | **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
@@ -109,8 +111,8 @@ This API deletes the client from the database.
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -126,22 +128,22 @@ This API deletes the client from the database.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| Key              | Type     | Description                                                                                                    |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
-| `facegallery_id` | `list` | List of facegallery |
+| `facegallery_id` | `list`   | List of facegallery                                                                                            |
 
 ### **POST `/facegallery/create-facegallery`**
 
-This API create the new of face gallery.
+This API creates the new face gallery.
 
 #### **Request**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY             | VALUE               |
+| --------------- | ------------------- |
 | **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
@@ -153,17 +155,17 @@ This API create the new of face gallery.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `facegallery_id` | `string` | Name of facegallery |
-| `trx_id` | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
+| Key              | Type     | Description                                                                   |
+| ---------------- | -------- | ----------------------------------------------------------------------------- |
+| `facegallery_id` | `string` | Name of facegallery                                                           |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
 
 #### **Response**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -176,11 +178,11 @@ This API create the new of face gallery.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| Key              | Type     | Description                                                                                                    |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
-| `facegallery_id` | `string` | Name of facegallery |
+| `facegallery_id` | `string` | Name of facegallery                                                                                            |
 
 ### **DELETE `/facegallery/delete-facegallery`**
 
@@ -190,8 +192,8 @@ This API deletes a facegallery.
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY             | VALUE               |
+| --------------- | ------------------- |
 | **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
@@ -203,17 +205,17 @@ This API deletes a facegallery.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `facegallery_id` | `string` | Name of facegallery |
-| `trx_id` | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
+| Key              | Type     | Description                                                                   |
+| ---------------- | -------- | ----------------------------------------------------------------------------- |
+| `facegallery_id` | `string` | Name of facegallery                                                           |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
 
 #### **Response**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -226,24 +228,24 @@ This API deletes a facegallery.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| Key              | Type     | Description                                                                                                    |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
-| `facegallery_id` | `string` | Name of deleted facegallery |
+| `facegallery_id` | `string` | Name of deleted facegallery                                                                                    |
 
 ## **User Endpoints**
 
 ### **POST `/facegallery/enroll-face`**
 
-This API registers an user to the database.
+This API registers a user to the database.
 
 #### **Request**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY             | VALUE               |
+| --------------- | ------------------- |
 | **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
@@ -258,20 +260,20 @@ This API registers an user to the database.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `user_id` | `string` | Unique user identifier, alphanumeric \(eg. \#NIK\) |
-| `user_name` | `string` | The name of the person who has the `user_id` |
-| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric \(eg. LocationName, CompanyName, etc\) |
-| `image` | `string` | Base64 encoded JPG or PNG image |
-| `trx_id` | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
+| Key              | Type     | Description                                                                      |
+| ---------------- | -------- | -------------------------------------------------------------------------------- |
+| `user_id`        | `string` | Unique user identifier, alphanumeric (eg. #NIK)                                  |
+| `user_name`      | `string` | The name of the person who has the `user_id`                                     |
+| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc) |
+| `image`          | `string` | Base64 encoded JPG or PNG image                                                  |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes    |
 
 #### **Response**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -283,9 +285,9 @@ This API registers an user to the database.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| Key              | Type     | Description                                                                                                    |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md) |
 
 ### **GET `/facegallery/list-faces`**
@@ -296,8 +298,8 @@ This API gives a list of the registered user.
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY             | VALUE               |
+| --------------- | ------------------- |
 | **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
@@ -309,17 +311,17 @@ This API gives a list of the registered user.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric \(eg. LocationName, CompanyName, etc\) |
-| `trx_id` | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
+| Key              | Type     | Description                                                                      |
+| ---------------- | -------- | -------------------------------------------------------------------------------- |
+| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc) |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes    |
 
 #### **Response**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -341,22 +343,22 @@ This API gives a list of the registered user.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| Key              | Type     | Description                                                                                                    |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
-| `faces` | `list` | List of registered user |
+| `faces`          | `list`   | List of registered user                                                                                        |
 
 ### **POST `/facegallery/verify-face`**
 
-This API verifies an user\_id and an image with a registered user or it do 1:1 authentication.
+This API verifies an user\_id and an image with a registered user or it does 1:1 authentication.
 
 #### **Request**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY             | VALUE               |
+| --------------- | ------------------- |
 | **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
@@ -370,19 +372,19 @@ This API verifies an user\_id and an image with a registered user or it do 1:1 a
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `user_id` | `string` | Unique user identifier, alphanumeric \(eg. \#NIK\) |
-| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric \(eg. LocationName, CompanyName, etc\) |
-| `image` | `string` | Base64 encoded JPG or PNG image |
-| `trx_id` | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
+| Key              | Type     | Description                                                                      |
+| ---------------- | -------- | -------------------------------------------------------------------------------- |
+| `user_id`        | `string` | Unique user identifier, alphanumeric (eg. #NIK)                                  |
+| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc) |
+| `image`          | `string` | Base64 encoded JPG or PNG image                                                  |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes    |
 
 #### **Response**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -398,14 +400,14 @@ This API verifies an user\_id and an image with a registered user or it do 1:1 a
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
-| `status_message` | `string` | The verbose message of API hit status, please refer to [List Status Code](../others/list-of-status-code.md) |
-| `user_name` | `string` | Username |
-| `similarity` | `float` | Describe the comparison of facial similarities, scale 0.0 to 1.0 \(from 0% to 100% similar\) |
-| `masker` | `boolean` | If a person’s face wearing a mask, will return True, else return False |
-| `verified` | `boolean` | If similarity above set config parameter\(eg. threshold = 0.75\), return True, else return False |
+| Key              | Type      | Description                                                                                                  |
+| ---------------- | --------- | ------------------------------------------------------------------------------------------------------------ |
+| `status`         | `string`  | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| `status_message` | `string`  | The verbose message of API hit status, please refer to [List Status Code](../others/list-of-status-code.md)  |
+| `user_name`      | `string`  | Username                                                                                                     |
+| `similarity`     | `float`   | Describe the comparison of facial similarities, scale 0.0 to 1.0 (from 0% to 100% similar)                   |
+| `masker`         | `boolean` | If a person’s face wearing a mask, will return True, else return False                                       |
+| `verified`       | `boolean` | If similarity above set config parameter(eg. threshold = 0.75), return True, else return False               |
 
 ### **POST `/facegallery/identify-face`**
 
@@ -415,8 +417,8 @@ This API identify an image with a registered user or it do 1:N authentication..
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY             | VALUE               |
+| --------------- | ------------------- |
 | **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
@@ -429,18 +431,18 @@ This API identify an image with a registered user or it do 1:N authentication..
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric \(eg. LocationName, CompanyName, etc\) |
-| `image` | `string` | Base64 encoded JPG or PNG image |
-| `trx_id` | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
+| Key              | Type     | Description                                                                      |
+| ---------------- | -------- | -------------------------------------------------------------------------------- |
+| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc) |
+| `image`          | `string` | Base64 encoded JPG or PNG image                                                  |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes    |
 
 #### **Response**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -461,14 +463,14 @@ This API identify an image with a registered user or it do 1:N authentication..
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
-| `status_message` | `string` | The verbose message of API hit status, please refer to [List Status Code](../others/list-of-status-code.md) |
-| `confidence_level` | `float` | Describe confidence of model, scale 0.0 to 1.0 \(from 0% to 100% confidence\) |
-| `mask` | `boolean` | If a person’s face wearing a mask, will return True, else return False |
-| `user_id` | `string` | Unique user identifier, alphanumeric \(eg. \#NIK\) |
-| `user_name` | `string` | The name of the person who has the `user_id` |
+| Key                | Type      | Description                                                                                                  |
+| ------------------ | --------- | ------------------------------------------------------------------------------------------------------------ |
+| `status`           | `string`  | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| `status_message`   | `string`  | The verbose message of API hit status, please refer to [List Status Code](../others/list-of-status-code.md)  |
+| `confidence_level` | `float`   | Describe confidence of model, scale 0.0 to 1.0 (from 0% to 100% confidence)                                  |
+| `mask`             | `boolean` | If a person’s face wearing a mask, will return True, else return False                                       |
+| `user_id`          | `string`  | Unique user identifier, alphanumeric (eg. #NIK)                                                              |
+| `user_name`        | `string`  | The name of the person who has the `user_id`                                                                 |
 
 ### **DELETE `/facegallery/delete-face`**
 
@@ -478,8 +480,8 @@ This API deletes a user.
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY             | VALUE               |
+| --------------- | ------------------- |
 | **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
@@ -492,18 +494,18 @@ This API deletes a user.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `user_id` | `string` | Unique user identifier, alphanumeric \(eg. \#NIK\) |
-| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric \(eg. LocationName, CompanyName, etc\) |
-| `trx_id` | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
+| Key              | Type     | Description                                                                      |
+| ---------------- | -------- | -------------------------------------------------------------------------------- |
+| `user_id`        | `string` | Unique user identifier, alphanumeric (eg. #NIK)                                  |
+| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc) |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes    |
 
 #### **Response**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -515,9 +517,9 @@ This API deletes a user.
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| Key              | Type     | Description                                                                                                    |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 
 ### **POST `/compare-images`**
@@ -528,8 +530,8 @@ This API compares the two images to determine if they are verified or not. This 
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY             | VALUE               |
+| --------------- | ------------------- |
 | **Accesstoken** | `oauth Accesstoken` |
 
 #### **`Body`**
@@ -542,18 +544,18 @@ This API compares the two images to determine if they are verified or not. This 
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `source_image` | `string` | Base64 encoded JPG or PNG of compared image |
-| `target_image` | `string` | Base64 encoded JPG or PNG of the reference image |
-| `trx_id` | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
+| Key            | Type     | Description                                                                   |
+| -------------- | -------- | ----------------------------------------------------------------------------- |
+| `source_image` | `string` | Base64 encoded JPG or PNG of compared image                                   |
+| `target_image` | `string` | Base64 encoded JPG or PNG of the reference image                              |
+| `trx_id`       | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
 
 #### **Response**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -568,11 +570,10 @@ This API compares the two images to determine if they are verified or not. This 
 }
 ```
 
-| Key | Type | Description |
-| :--- | :--- | :--- |
-| `status` | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
-| `status_message` | `string` | The verbose message of API hit status, please refer to [List Status Code](../others/list-of-status-code.md) |
-| `similarity` | `float` | Describe the comparison of facial similarities, scale 0.0 to 1.0 \(from 0% to 100% similar\) |
-| `verified` | `boolean` | If similarity above set config parameter\(eg. threshold = 0.75\), return True, else return False |
-| `masker` | `boolean` | If a person’s face wearing a mask, will return True, else return False |
-
+| Key              | Type      | Description                                                                                                  |
+| ---------------- | --------- | ------------------------------------------------------------------------------------------------------------ |
+| `status`         | `string`  | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| `status_message` | `string`  | The verbose message of API hit status, please refer to [List Status Code](../others/list-of-status-code.md)  |
+| `similarity`     | `float`   | Describe the comparison of facial similarities, scale 0.0 to 1.0 (from 0% to 100% similar)                   |
+| `verified`       | `boolean` | If similarity above set config parameter(eg. threshold = 0.75), return True, else return False               |
+| `masker`         | `boolean` | If a person’s face wearing a mask, will return True, else return False                                       |
