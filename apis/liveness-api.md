@@ -2,9 +2,10 @@
 description: This section contains documentation on Liveness API usage and functions
 ---
 
-# **Batch Liveness API**
+# Riset.ai Liveness APIs
 ![](../.gitbook/assets/risetai\_logo.72c56424.png)
 
+## **Batch Liveness API**
 ## **POST `/liveness-api/batch-verify-face-liveness`**
 
 This API predicts liveness of face from two type active and passive. Given a requested `parameter`, will return `True` or `False` depending on the API's prediction
