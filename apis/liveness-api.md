@@ -30,7 +30,8 @@ This API predicts liveness of face from two type active and passive. Given a req
         {
             "image" : "/92fhfsuefhs73yf73sfs3...",
             "face_parameter" : "eyes open",
-            "spoof_detection" : true
+            "spoof_detection" : true,
+            "face_verification" : true
         },
         {
             "image" : "/92fhfsuefhs73yf73sfs3...",
@@ -40,7 +41,8 @@ This API predicts liveness of face from two type active and passive. Given a req
         {
             "image" : "/92fhfsuefhs73yf73sfs3...",
             "face_parameter" : "mouth open",
-            "spoof_detection" : true
+            "spoof_detection" : true,
+            "face_verification" : false
         }
         
     ]
@@ -98,8 +100,6 @@ This API predicts liveness of face from two type active and passive. Given a req
         },
         "image3": {
             "match": true,
-            "similarity": 0.7758,
-            "verified": true,
             "masker": true,
             "spoof": true,
             "spoof_score": 0.0492,
