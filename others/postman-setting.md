@@ -17,7 +17,7 @@ description: This is a tutorial to hit the API with Postman
 9. Click send.
 10. Wait for the response.
 
-####  <a id="Example"></a>
+#### &#x20;<a href="#example" id="example"></a>
 
 ## Example
 
@@ -25,27 +25,26 @@ description: This is a tutorial to hit the API with Postman
 
 ![](../.gitbook/assets/access-token.png)
 
-2. Set the method and put the URL. \(e.g **POST**`/pedulilindungi/enroll-face`\) 
+2\. Set the method and put the URL. (e.g **POST**`/pedulilindungi/enroll-face`)&#x20;
 
 ![](../.gitbook/assets/pswpold.png)
 
-3. Choose Header, and add the `Accesstoken`. 
+3\. Choose Header, and add the `Accesstoken`.&#x20;
 
 ![](../.gitbook/assets/lqp5isc.png)
 
-4. Choose Body and select RAW, change type file to JSON. 
+4\. Choose Body and select RAW, change type file to JSON.&#x20;
 
 ![](../.gitbook/assets/xhqzlkg.png)
 
-5. Fill with request JSON text on the body like explained above. 
+5\. Fill with request JSON text on the body like explained above.&#x20;
 
 ![](../.gitbook/assets/ahk0je6.png)
 
-6. Click `Send` \(pictures number 2\).
+6\. Click `Send` (pictures number 2).
 
-7. Wait for the response. If it is successful, there’s will be output in JSON File.
+7\. Wait for the response. If it is successful, there’s will be output in JSON File.
 
 ![](../.gitbook/assets/yvz1d8c.png)
 
-8. The response output depends on which requests are used.
-
+8\. The response output depends on which requests are used.
