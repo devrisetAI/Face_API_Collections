@@ -66,7 +66,7 @@ This API predicts the liveness of the face from two types active and passive. Gi
     "liveness": "false",
     "match_status": {
         "verified": false,
-        "spoof_detection": true,
+        "is_real": true,
         "angle": false,
         "eyes": true,
         "mouth": false
@@ -97,14 +97,14 @@ This API predicts the liveness of the face from two types active and passive. Gi
 | `verified`                     | `boolean` | If confidence\_level above threshold, returns `True`                                                               |
 | `match_status`                 | `array`   | Contains result of requested `face_parameters`                                                                     |
 | `match_status.angle`           | `boolean` | Returns `True` if API predicts the same result as requested `face_parameters.angle`, will only return if requested |
-| `match_status.spoof_detection` | `boolean` | Returns `True` if face deemed `real`                                                                               |
+| `match_status.is_real` | `boolean` | Returns `True` if face deemed `real`                                                                               |
 | `match_status.eyes`            | `boolean` | Returns `True` if API predicts the same result as requested `face_parameters.eyes`, will only return if requested  |
 | `match_status.mouth`           | `boolean` | Returns `True` if API predicts the same result as requested `face_parameters.mouth`, will only return if requested |
 | `match_status.verified`        | `bool`    | If face considered verified, will return `True`                                                                    |
 | `results`                      | `array`   | Contains a more detailed result of predicted face attributes                                                       |
 | `results.similarity`           | `float`   | Face similarity score                                                                                              |
 | `results.masker`               | `bool`    | If face wears masker, will return `True`                                                                           |
-| `results.spoof`                | `string`  | If image is considered spoof, will return `True`, else `False`                                                     |
+| `results.is_spoof`                | `string`  | If image is considered spoof, will return `True`, else `False`                                                     |
 | `results.spoof_score`          | `float`   | Spoof detection score                                                                                              |
 | `results.roll`                 | `float`   | Predicted face roll degree                                                                                         |
 | `results.pitch`                | `float`   | Predicted face pitch degree                                                                                        |
@@ -194,7 +194,7 @@ This API predicts the liveness of the face from two typed active and passive fro
             "similarity": 0.7758,
             "verified": true,
             "masker": true,
-            "spoof": true,
+            "is_spoof": true,
             "spoof_score": 0.0492,
             "left_eye": "open",
             "left_eye_score": 1.0,
@@ -213,7 +213,7 @@ This API predicts the liveness of the face from two typed active and passive fro
         "image3": {
             "match": true,
             "masker": true,
-            "spoof": true,
+            "is_spoof": true,
             "spoof_score": 0.0492,
             "mouth": "closed",
             "mouth_score": 0.9439
@@ -233,7 +233,7 @@ This API predicts the liveness of the face from two typed active and passive fro
 | `results.image_n.verified`        | `bool`   | If face considered verified, will return `True`                                             |
 | `results.image_n.similarity`      | `float`  | Face similarity score                                                                       |
 | `results.image_n.masker`          | `bool`   | If face wears masker, will return `True`                                                    |
-| `results.image_n.spoof`           | `bool`   | If image is considered spoof, will return `True`, else, `False`                             |
+| `results.image_n.is_spoof`           | `bool`   | If image is considered spoof, will return `True`, else, `False`                             |
 | `results.image_n.spoof_score`     | `float`  | Spoof detection score                                                                       |
 | `results.image_n.roll`            | `float`  | Predicted face roll degree                                                                  |
 | `results.image_n.pitch`           | `float`  | Predicted face pitch degree                                                                 |
