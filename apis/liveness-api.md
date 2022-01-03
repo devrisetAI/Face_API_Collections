@@ -74,7 +74,7 @@ This API predicts the liveness of the face from two types active and passive. Gi
     "face_attributes": {
         "similarity": 0.1557,
         "masker": true,
-        "spoof": false,
+        "is_spoof": false,
         "spoof_score": 0.0031,
         "roll": 1.48,
         "pitch": -3.25,
