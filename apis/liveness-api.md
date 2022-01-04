@@ -71,7 +71,7 @@ This API predicts the liveness of the face from two types active and passive. Gi
         "eyes": true,
         "mouth": false
     },
-    "face_attributes": {
+    "results": {
         "similarity": 0.1557,
         "masker": true,
         "is_spoof": false,
