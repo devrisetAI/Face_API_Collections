@@ -121,8 +121,8 @@ This API fetches client's API Counters Remaining Quota (API Hits, Num Faces Enro
     "status_message": "Success",
     "remaining_limit": {
         "n_api_hits": 9743,
-        "n_face_registered": 346,
-        "n_facegallery_owned": 3
+        "n_face": 346,
+        "n_facegallery": 3
     }
 }
 ```
@@ -133,8 +133,8 @@ This API fetches client's API Counters Remaining Quota (API Hits, Num Faces Enro
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `remaining_limit` | `array` | Contains counters remaining quota/limit |
 | `n_api_hits` | `int` | API Hits remaining limit |
-| `n_face_registered` | `int` | Remaining number of faces elligible to enroll |
-| `n_facegallery_owned` | `int` | Remaining number of facegallery elligible to create |
+| `n_face` | `int` | Remaining number of faces elligible to enroll |
+| `n_facegallery` | `int` | Remaining number of facegallery elligible to create |
 
 ## **Facegallery Endpoints**
 
