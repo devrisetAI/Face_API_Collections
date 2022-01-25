@@ -89,6 +89,53 @@ This API deletes the client from the database.
 | `status_message` | `string` | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md) |
 | `face_galleryid` | `list`   | List of remaining facegallery                                                                                  |
 
+### **GET `/client/get-counters`**
+
+This API fetches client's API Counters Remaining Quota (API Hits, Num Faces Enrolled, & Num FaceGallery Owned).
+
+#### **Request**
+
+#### **`Headers`**
+
+| KEY             | VALUE               |
+| --------------- | ------------------- |
+| **Accesstoken** | `oauth Accesstoken` |
+
+#### **`Body`**
+
+* `None`
+
+#### **Response**
+
+#### **`Headers`**
+
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
+| **Content-Type** | `application/json` |
+
+#### **`Body`**
+
+```JSON
+{
+    "status": "200",
+    "status_message": "Success",
+    "remaining_limit": {
+        "n_api_hits": 9743,
+        "n_face_registered": 346,
+        "n_facegallery_owned": 3
+    }
+}
+```
+
+| Key              | Type     | Description                                                                                                    |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
+| `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| `remaining_limit` | `array` | Contains counters remaining quota/limit |
+| `n_api_hits` | `int` | API Hits remaining limit |
+| `n_face_registered` | `int` | Remaining number of faces elligible to enroll |
+| `n_facegallery_owned` | `int` | Remaining number of facegallery elligible to create |
+
 ## **Facegallery Endpoints**
 
 ### **GET `/facegallery/my-facegalleries`**
