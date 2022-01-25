@@ -103,7 +103,14 @@ This API fetches client's API Counters Remaining Quota (API Hits, Num Faces Enro
 
 #### **`Body`**
 
-* `None`
+```JSON
+{
+    "trx_id" : "alphanumericalstring1234"
+}
+```
+| Key              | Type     | Description                  |
+| ---------------- | -------- | -------------------------------------------------|
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
 
 #### **Response**
 
