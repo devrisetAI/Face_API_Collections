@@ -8,7 +8,7 @@ description: >-
 
 ## **Base URL**
 
-> [https://riset.luqmanr.xyz/oauth](https://riset.luqmanr.xyz/oauth) \(priority\) [  
+> [https://riset.luqmanr.xyz/oauth](https://riset.luqmanr.xyz/oauth) (priority) [\
 > https://api.riset.ai/oauth](https://api.riset.ai/api/oauth)
 
 ## **1. POST `/client/token`**
@@ -29,17 +29,17 @@ Will generate a new **Accesstoken** every time it gets a request, it is recommen
 
 * `x-www-form-urlencoded`
 
-| KEY | VALUE |
-| :--- | :--- |
-| **client\_id** | `riset.ai` |
-| **password** | `#password` |
+| KEY            | VALUE       |
+| -------------- | ----------- |
+| **client\_id** | `riset.ai`  |
+| **password**   | `#password` |
 
 ### **Response**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -56,31 +56,31 @@ Will generate a new **Accesstoken** every time it gets a request, it is recommen
 
 This endpoint is used to revoke the previously generated **Accesstoken**. **Accesstoken** will be added to the Blacklist list.
 
-Used if **Accesstoken** leaked to other party, and want to revoke the authorization
+Used if **Accesstoken** leaked to other party, and want to revoke the authorization.
 
 ### **Request**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY             | VALUE               |
+| --------------- | ------------------- |
 | **Accesstoken** | `oauth Accesstoken` |
 
 #### Body
 
 * `x-www-form-urlencoded`
 
-| KEY | VALUE |
-| :--- | :--- |
-| **client\_id** | `riset.ai` |
-| **password** | `#password` |
+| KEY            | VALUE       |
+| -------------- | ----------- |
+| **client\_id** | `riset.ai`  |
+| **password**   | `#password` |
 
 ### **Response**
 
 #### **`Headers`**
 
-| KEY | VALUE |
-| :--- | :--- |
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
 | **Content-Type** | `application/json` |
 
 #### **`Body`**
@@ -90,4 +90,3 @@ Used if **Accesstoken** leaked to other party, and want to revoke the authorizat
   "status_message": "Success Revoke Token"
 }
 ```
-
