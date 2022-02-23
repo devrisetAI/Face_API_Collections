@@ -28,7 +28,7 @@ FaceGallery is a collection of users, please refer to this [API ](apis/face-api.
 
 ## 4. Play with the API
 
-Try to [enroll ](apis/face-api.md#post-facegallery-enroll-face)a user and then try [recognition ](apis/face-api.md#post-facegallery-recognize-face)and [verification](apis/face-api.md#post-facegallery-verify-face).
+Try to [enroll ](apis/face-api.md#post-facegallery-enroll-face)a user and then try [identification](apis/face-api.md#post-facegallery-identify-face) and [verification](apis/face-api.md#post-facegallery-verify-face).
 
 ## 5. Still in trouble?
 
