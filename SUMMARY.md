@@ -17,5 +17,4 @@
 * [Others](others/README.md)
   * [List of Status Code](others/list-of-status-code.md)
   * [Tutorial for Hitting API with Postman](others/postman-setting.md)
-  * [Changelogs](others/changelogs.md)
   * [Contact Person](others/contat-person.md)
