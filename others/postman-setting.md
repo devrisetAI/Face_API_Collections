@@ -48,3 +48,12 @@ description: This is a tutorial to hit the API with Postman
 ![](../.gitbook/assets/yvz1d8c.png)
 
 8\. The response output depends on which requests are used.
+
+
+
+## Postman Documentation
+
+{% embed url="https://documenter.getpostman.com/view/16178629/UVkmRHYF" %}
+Postman Face API -  Collections
+{% endembed %}
+

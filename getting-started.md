@@ -34,6 +34,10 @@ Try to [enroll ](apis/face-api.md#post-facegallery-enroll-face)a user and then t
 
 Look at [the tutorial for hitting API with Postman](others/postman-setting.md) or the [contact ](others/contat-person.md)person in charge.
 
+{% embed url="https://documenter.getpostman.com/view/16178629/UVkmRHYF" %}
+Postman Face API - Collections
+{% endembed %}
+
 
 
 
