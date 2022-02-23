@@ -91,7 +91,7 @@ This API deletes the client from the database.
 
 ### **GET `/client/get-counters`**
 
-This API fetches client's API Counters Remaining Quota (API Hits, Num Faces Enrolled, & Num FaceGallery Owned).
+This API fetches the client's API counters remaining quota (API Hits, Num Faces Enrolled, & Num FaceGallery Owned).
 
 #### **Request**
 

@@ -1,5 +1,5 @@
 ---
-description: This section contains documentation on Liveness API usage and functions
+description: This section contains documentation on Liveness API usage and functions.
 ---
 
 # Liveness API
@@ -10,7 +10,7 @@ description: This section contains documentation on Liveness API usage and funct
 
 ### **POST `/liveness-api/verify-face-liveness`**
 
-This API predicts the liveness of the face from two types active and passive. Given a requested `parameter`, will return `True` or `False` depending on the API's prediction
+This API predicts the liveness of the face from two types active and passive. Given a requested `parameter`, will return `True` or `False` depending on the API's prediction.
 
 #### **Request**
 
@@ -37,17 +37,17 @@ This API predicts the liveness of the face from two types active and passive. Gi
 }
 ```
 
-| Key                               | Type     | Description                                                                                                            | Possible Parameters                                             |
-| --------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Key                               | Type     | Description                                                                                                                                    | Possible Parameters                                             |
+| --------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | `user_id`                         | `string` | Unique User/Face Identifier, **this is optional but recommended** (paired with `facegallery_id`)                                               | -                                                               |
 | `facegallery_id`                  | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc), **this is optional but recommended** (paired with `user_id`) | -                                                               |
-| `image`                           | `string` | Base64 encoded JPG or PNG image                                                                                        | -                                                               |
-| `trx_id`                          | `string` | Unique transaction identifier, for transaction logging and debugging purposes                                          | -                                                               |
-| `face_parameters`                 | `array`  | contains requested parameters to match with API prediction, at least `one` `parameter` is needed                       | -                                                               |
-| `face_parameters.angle`           | `string` | "left" or "right", API will predict if the input `image` is the facing `left` or `right`, **this is optional**                 | "face left", "face right", "face up", "face down", "face front" |
-| `face_parameters.spoof_detection` | `bool`   | Specify whether to do `spoof_detection` or not, will default to `True` if none specified, **this is optional**                 | true, false                                                     |
-| `face_parameters.eyes`            | `string` | "open" or "closed", API will predict if the input `image` contains a face with `open` or `closed` eyes, **this is optional**   | "open", "closed"                                                |
-| `face_parameters.mouth`           | `string` | "open" or "closed", API will predict if the input `image` contains a face with `open` or `closed` mouth, **this is optional**  | "open", "closed"                                                |
+| `image`                           | `string` | Base64 encoded JPG or PNG image                                                                                                                | -                                                               |
+| `trx_id`                          | `string` | Unique transaction identifier, for transaction logging and debugging purposes                                                                  | -                                                               |
+| `face_parameters`                 | `array`  | contains requested parameters to match with API prediction, at least `one` `parameter` is needed                                               | -                                                               |
+| `face_parameters.angle`           | `string` | "left" or "right", API will predict if the input `image` is the facing `left` or `right`, **this is optional**                                 | "face left", "face right", "face up", "face down", "face front" |
+| `face_parameters.spoof_detection` | `bool`   | Specify whether to do `spoof_detection` or not, will default to `True` if none specified, **this is optional**                                 | true, false                                                     |
+| `face_parameters.eyes`            | `string` | "open" or "closed", API will predict if the input `image` contains a face with `open` or `closed` eyes, **this is optional**                   | "open", "closed"                                                |
+| `face_parameters.mouth`           | `string` | "open" or "closed", API will predict if the input `image` contains a face with `open` or `closed` mouth, **this is optional**                  | "open", "closed"                                                |
 
 #### **Response**
 
@@ -89,38 +89,38 @@ This API predicts the liveness of the face from two types active and passive. Gi
 }
 ```
 
-| Key                            | Type      | Description                                                                                                        |
-| ------------------------------ | --------- | ------------------------------------------------------------------------------------------------------------------ |
-| `status`                       | `string`  | Describing the condition of API hit                                                                                |
-| `status_message`               | `string`  | The verbose message of API hit status                                                                              |
-| `confidence_level`             | `float`   | Describe confidence of model, scale 0.0 to 1.0 (from 0% to 100% confidence)                                        |
-| `verified`                     | `boolean` | If confidence\_level above threshold, returns `True`                                                               |
-| `match_status`                 | `array`   | Contains result of requested `face_parameters`                                                                     |
-| `match_status.angle`           | `boolean` | Returns `True` if API predicts the same result as requested `face_parameters.angle`, will only return if requested |
-| `match_status.is_real` | `boolean` | Returns `True` if face deemed `real`                                                                               |
-| `match_status.eyes`            | `boolean` | Returns `True` if API predicts the same result as requested `face_parameters.eyes`, will only return if requested  |
-| `match_status.mouth`           | `boolean` | Returns `True` if API predicts the same result as requested `face_parameters.mouth`, will only return if requested |
-| `match_status.verified`        | `bool`    | If face considered verified, will return `True`                                                                    |
-| `results`                      | `array`   | Contains a more detailed result of predicted face attributes                                                       |
-| `results.similarity`           | `float`   | Face similarity score                                                                                              |
-| `results.masker`               | `bool`    | If face wears masker, will return `True`                                                                           |
-| `results.is_spoof`                | `string`  | If image is considered spoof, will return `True`, else `False`                                                     |
-| `results.spoof_score`          | `float`   | Spoof detection score                                                                                              |
-| `results.roll`                 | `float`   | Predicted face roll degree                                                                                         |
-| `results.pitch`                | `float`   | Predicted face pitch degree                                                                                        |
-| `results.yaw`                  | `float`   | Predicted face yaw degree                                                                                          |
-| `results.left_eye`             | `string`  | If image contains opened left eye, will return `open`, else, `closed`                                              |
-| `results.left_eye_score`       | `float`   | Predicted left\_eye score                                                                                          |
-| `results.right_eye`            | `bool`    | If image contains opened right eye, will return `open`, else, `closed`                                             |
-| `results.right_eye_score`      | `float`   | Predicted right\_eye score                                                                                         |
-| `results.mouth`                | `bool`    | If image contains open mouth, returns `open`. If closed mouth, returns `closed`, if masked returns `masked`        |
-| `results.mouth_score`          | `float`   | Predicted mouth score                                                                                              |
+| Key                       | Type      | Description                                                                                                        |
+| ------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
+| `status`                  | `string`  | Describing the condition of API hit                                                                                |
+| `status_message`          | `string`  | The verbose message of API hit status                                                                              |
+| `confidence_level`        | `float`   | Describe confidence of model, scale 0.0 to 1.0 (from 0% to 100% confidence)                                        |
+| `verified`                | `boolean` | If confidence\_level above threshold, returns `True`                                                               |
+| `match_status`            | `array`   | Contains result of requested `face_parameters`                                                                     |
+| `match_status.angle`      | `boolean` | Returns `True` if API predicts the same result as requested `face_parameters.angle`, will only return if requested |
+| `match_status.is_real`    | `boolean` | Returns `True` if face deemed `real`                                                                               |
+| `match_status.eyes`       | `boolean` | Returns `True` if API predicts the same result as requested `face_parameters.eyes`, will only return if requested  |
+| `match_status.mouth`      | `boolean` | Returns `True` if API predicts the same result as requested `face_parameters.mouth`, will only return if requested |
+| `match_status.verified`   | `bool`    | If face considered verified, will return `True`                                                                    |
+| `results`                 | `array`   | Contains a more detailed result of predicted face attributes                                                       |
+| `results.similarity`      | `float`   | Face similarity score                                                                                              |
+| `results.masker`          | `bool`    | If face wears masker, will return `True`                                                                           |
+| `results.is_spoof`        | `string`  | If image is considered spoof, will return `True`, else `False`                                                     |
+| `results.spoof_score`     | `float`   | Spoof detection score                                                                                              |
+| `results.roll`            | `float`   | Predicted face roll degree                                                                                         |
+| `results.pitch`           | `float`   | Predicted face pitch degree                                                                                        |
+| `results.yaw`             | `float`   | Predicted face yaw degree                                                                                          |
+| `results.left_eye`        | `string`  | If image contains opened left eye, will return `open`, else, `closed`                                              |
+| `results.left_eye_score`  | `float`   | Predicted left\_eye score                                                                                          |
+| `results.right_eye`       | `bool`    | If image contains opened right eye, will return `open`, else, `closed`                                             |
+| `results.right_eye_score` | `float`   | Predicted right\_eye score                                                                                         |
+| `results.mouth`           | `bool`    | If image contains open mouth, returns `open`. If closed mouth, returns `closed`, if masked returns `masked`        |
+| `results.mouth_score`     | `float`   | Predicted mouth score                                                                                              |
 
 ## **Batch Liveness API**
 
 ### **POST `/liveness-api/batch-verify-face-liveness`**
 
-This API predicts the liveness of the face from two typed active and passive from multiple images. Given a requested `parameter`, will return `True` or `False` depending on the API's prediction
+This API predicts the liveness of the face from two typed active and passive from multiple images. Given a requested `parameter`, will return `True` or `False` depending on the API's prediction.
 
 #### **Request**
 
@@ -161,17 +161,17 @@ This API predicts the liveness of the face from two typed active and passive fro
 }
 ```
 
-| Key                               | Type     | Description                                                                                                            | Possible Parameters                                             |
-| --------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Key                       | Type            | Description                                                                                                                                    | Possible Parameters                                                                                                       |
+| ------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `user_id`                 | `string`        | Unique User/Face Identifier, **this is optional but recommended** (paired with `facegallery_id`)                                               | -                                                                                                                         |
 | `facegallery_id`          | `string`        | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc), **this is optional but recommended** (paired with `user_id`) | -                                                                                                                         |
 | `success_threshold`       | `int`           | Minimal number of successful image liveness detection, will default to all images if none specified, **this is optional**                      | -                                                                                                                         |
-| `trx_id`                  | `string`        | Unique transaction identifier, for transaction logging and debugging, **this is optional**                                                     || -                                                                                                                         |
-| `batch`                   | `list of array` | List of array, containing `image`, `face_parameter`, and `spoof_detection`, **MAXIMAL: 8 batches**                                      | -                                                                                                                         |
-| `batch.image`             | `string`        | `Base64` encoded `PNG` or `JPG` image                                                                                                  | -                                                                                                                         |
-| `batch.face_parameter`    | `string`        | contains requested parameters to match with API prediction                                                            | "face left", "face right", "face up", "face down", "face front", "eyes open", "eyes closed", "mouth open", "mouth closed" |
+| `trx_id`                  | `string`        | Unique transaction identifier, for transaction logging and debugging, **this is optional**                                                     | -                                                                                                                         |
+| `batch`                   | `list of array` | List of array, containing `image`, `face_parameter`, and `spoof_detection`, **MAXIMAL: 8 batches**                                             | -                                                                                                                         |
+| `batch.image`             | `string`        | `Base64` encoded `PNG` or `JPG` image                                                                                                          | -                                                                                                                         |
+| `batch.face_parameter`    | `string`        | contains requested parameters to match with API prediction                                                                                     | "face left", "face right", "face up", "face down", "face front", "eyes open", "eyes closed", "mouth open", "mouth closed" |
 | `batch.spoof_detection`   | `boolean`       | Specify whether to do spoof\_detection on `batch.image` or not, will default to `true` if none specified, **this is optional**                 | true, false                                                                                                               |
-| `batch.face_verification` | `boolean`       | Specify whether to do face verification on `batch.image` or not, will default to `true` if none specified, **this is optional**                 true, false                                                                                                               |
+| `batch.face_verification` | `boolean`       | Specify whether to do face verification on `batch.image` or not, will default to `true` if none specified, **this is optional** true, false    |                                                                                                                           |
 
 #### **Response**
 
@@ -233,7 +233,7 @@ This API predicts the liveness of the face from two typed active and passive fro
 | `results.image_n.verified`        | `bool`   | If face considered verified, will return `True`                                             |
 | `results.image_n.similarity`      | `float`  | Face similarity score                                                                       |
 | `results.image_n.masker`          | `bool`   | If face wears masker, will return `True`                                                    |
-| `results.image_n.is_spoof`           | `bool`   | If image is considered spoof, will return `True`, else, `False`                             |
+| `results.image_n.is_spoof`        | `bool`   | If image is considered spoof, will return `True`, else, `False`                             |
 | `results.image_n.spoof_score`     | `float`  | Spoof detection score                                                                       |
 | `results.image_n.roll`            | `float`  | Predicted face roll degree                                                                  |
 | `results.image_n.pitch`           | `float`  | Predicted face pitch degree                                                                 |
