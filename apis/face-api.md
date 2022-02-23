@@ -103,14 +103,15 @@ This API fetches client's API Counters Remaining Quota (API Hits, Num Faces Enro
 
 #### **`Body`**
 
-```JSON
+```
 {
     "trx_id" : "alphanumericalstring1234"
 }
 ```
-| Key              | Type     | Description                  |
-| ---------------- | -------- | -------------------------------------------------|
-| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
+
+| Key      | Type     | Description                                                                   |
+| -------- | -------- | ----------------------------------------------------------------------------- |
+| `trx_id` | `string` | Unique transaction identifier, for transaction logging and debugging purposes |
 
 #### **Response**
 
@@ -122,7 +123,7 @@ This API fetches client's API Counters Remaining Quota (API Hits, Num Faces Enro
 
 #### **`Body`**
 
-```JSON
+```
 {
     "status": "200",
     "status_message": "Success",
@@ -134,14 +135,14 @@ This API fetches client's API Counters Remaining Quota (API Hits, Num Faces Enro
 }
 ```
 
-| Key              | Type     | Description                                                                                                    |
-| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
-| `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
-| `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
-| `remaining_limit` | `array` | Contains counters remaining quota/limit |
-| `n_api_hits` | `int` | API Hits remaining limit |
-| `n_face` | `int` | Remaining number of faces elligible to enroll |
-| `n_facegallery` | `int` | Remaining number of facegallery elligible to create |
+| Key               | Type     | Description                                                                                                    |
+| ----------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| `status`          | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
+| `status_message`  | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
+| `remaining_limit` | `array`  | Contains counters remaining quota/limit                                                                        |
+| `n_api_hits`      | `int`    | API Hits remaining limit                                                                                       |
+| `n_face`          | `int`    | Remaining number of faces elligible to enroll                                                                  |
+| `n_facegallery`   | `int`    | Remaining number of facegallery elligible to create                                                            |
 
 ## **Facegallery Endpoints**
 
@@ -465,7 +466,7 @@ This API verifies an user\_id and an image with a registered user or it does 1:1
 
 ### **POST `/facegallery/identify-face`**
 
-This API identify an image with a registered user or it do 1:N authentication..
+This API identify an image with a registered user or it do 1:N authentication.
 
 #### **Request**
 
