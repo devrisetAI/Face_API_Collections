@@ -8,7 +8,7 @@
   * [Liveness](foundation/liveness.md)
   * [Reference Image Requirements](foundation/reference-image-requirements.md)
   * [Device Set-Up Requirements](foundation/device-set-up-requirements.md)
-* [API Base URL](base-url.md)
+* [Base URL](base-url.md)
 * [AuthTenant](authtenant.md)
 * [APIs](apis/README.md)
   * [Face API](apis/face-api.md)

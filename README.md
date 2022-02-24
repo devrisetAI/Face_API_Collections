@@ -6,19 +6,30 @@ description: >-
 
 # Face AI at Riset.ai
 
-![](.gitbook/assets/risetai_logo.72c56424.png)
+![](.gitbook/assets/risetai\_logo.72c56424.png)
 
 > ### _Our face products use models based on locally developed data sets. These models are perfect solutions for seamless non-contact authentication. This technology can be integrated with other authentication factors and authentication mechanisms, creating a multimodal verification technique._
 
-{% page-ref page="getting-started.md" %}
+{% content-ref url="getting-started.md" %}
+[getting-started.md](getting-started.md)
+{% endcontent-ref %}
 
-{% page-ref page="foundation/" %}
+{% content-ref url="foundation/" %}
+[foundation](foundation/)
+{% endcontent-ref %}
 
-{% page-ref page="authtenant.md" %}
+{% content-ref url="base-url.md" %}
+[base-url.md](base-url.md)
+{% endcontent-ref %}
 
-{% page-ref page="apis/" %}
+{% content-ref url="authtenant.md" %}
+[authtenant.md](authtenant.md)
+{% endcontent-ref %}
 
-{% page-ref page="others/" %}
+{% content-ref url="apis/" %}
+[apis](apis/)
+{% endcontent-ref %}
 
-
-
+{% content-ref url="others/" %}
+[others](others/)
+{% endcontent-ref %}
