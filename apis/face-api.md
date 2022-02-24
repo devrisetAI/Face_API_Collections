@@ -46,7 +46,7 @@ This API registers a client to the database.
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `facegallery_id` | `string` | Name of facegallery                                                                                            |
 
-### **POST `/client/delete`**
+### **DELETE`/client/delete`**
 
 This API deletes the client from the database.
 
