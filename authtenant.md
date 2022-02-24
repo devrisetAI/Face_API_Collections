@@ -6,12 +6,7 @@ description: >-
 
 # AuthTenant
 
-## **Base URL**
-
-> [https://riset.luqmanr.xyz/oauth](https://riset.luqmanr.xyz/oauth) (priority) [\
-> https://api.riset.ai/oauth](https://api.riset.ai/api/oauth)
-
-## **1. POST `/client/token`**
+## **1. POST `/oauth/client/token`**
 
 ### **Description**
 
@@ -50,7 +45,7 @@ Will generate a new **Accesstoken** every time it gets a request, it is recommen
 }
 ```
 
-## **2. POST `/token/revoke`**
+## **2. POST `/oauth/token/revoke`**
 
 ### **Description**
 

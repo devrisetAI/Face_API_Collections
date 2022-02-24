@@ -8,7 +8,7 @@ description: >-
 
 ![](../.gitbook/assets/screenshot-2021-09-06-at-16-24-48-face-verification-x-pedulilindungi-api-client-docs-hackmd.png)
 
-## **POST `/pedulilindungi/enroll-face`**
+## **POST /face-api`/pedulilindungi/enroll-face`**
 
 This API registers a user to the database.
 
@@ -69,7 +69,7 @@ This API registers a user to the database.
 | `status_message` | `string` | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md)                                                                                  |
 | `pl_data`        | `list`   | PeduliLindungi API response for registration, please refer to [PeduliLindungi Documentation](https://static.bigbox.co.id/web-files/Check%20In%20dan%20Check%20Out%20QR%20Peduli%20Lindungi.pdf) |
 
-## **POST `/pedulilindungi/list-faces`**
+## **POST /face-api`/pedulilindungi/list-faces`**
 
 This API gives a list of the registered user.
 
@@ -128,7 +128,7 @@ This API gives a list of the registered user.
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `faces`          | `list`   | List of registered user                                                                                        |
 
-## **POST `/pedulilindungi/verify-checkin-checkout`**
+## **POST /face-api`/pedulilindungi/verify-checkin-checkout`**
 
 This API verifies an image with a registered user.
 
@@ -190,7 +190,7 @@ This API verifies an image with a registered user.
 }
 ```
 
-## **POST `/pedulilindungi/identify-checkin-checkout`**
+## **POST /face-api`/pedulilindungi/identify-checkin-checkout`**
 
 This API identifies an image with a registered user.
 

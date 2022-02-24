@@ -6,7 +6,7 @@ description: This section contains the API used to face verification and recogni
 
 ## **Client Endpoints**
 
-### **POST `/client/register`**
+### **POST /face-api`/client/register`**
 
 This API registers a client to the database.
 
@@ -46,7 +46,7 @@ This API registers a client to the database.
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `facegallery_id` | `string` | Name of facegallery                                                                                            |
 
-### **DELETE`/client/delete`**
+### **DELETE /face-api`/client/delete`**
 
 This API deletes the client from the database.
 
@@ -89,7 +89,7 @@ This API deletes the client from the database.
 | `status_message` | `string` | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md) |
 | `face_galleryid` | `list`   | List of remaining facegallery                                                                                  |
 
-### **GET `/client/get-counters`**
+### **GET /face-api`/client/get-counters`**
 
 This API fetches the client's API counters remaining quota (API Hits, Num Faces Enrolled, & Num FaceGallery Owned).
 
@@ -146,7 +146,7 @@ This API fetches the client's API counters remaining quota (API Hits, Num Faces 
 
 ## **Facegallery Endpoints**
 
-### **GET `/facegallery/my-facegalleries`**
+### **GET /face-api`/facegallery/my-facegalleries`**
 
 This API gives the list of facegallery.
 
@@ -189,7 +189,7 @@ This API gives the list of facegallery.
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `facegallery_id` | `list`   | List of facegallery                                                                                            |
 
-### **POST `/facegallery/create-facegallery`**
+### **POST /face-api`/facegallery/create-facegallery`**
 
 This API creates the new face gallery.
 
@@ -239,7 +239,7 @@ This API creates the new face gallery.
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `facegallery_id` | `string` | Name of facegallery                                                                                            |
 
-### **DELETE `/facegallery/delete-facegallery`**
+### **DELETE /face-api`/facegallery/delete-facegallery`**
 
 This API deletes a facegallery.
 
@@ -291,7 +291,7 @@ This API deletes a facegallery.
 
 ## **User Endpoints**
 
-### **POST `/facegallery/enroll-face`**
+### **POST /face-api`/facegallery/enroll-face`**
 
 This API registers a user to the database.
 
@@ -345,7 +345,7 @@ This API registers a user to the database.
 | `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md) |
 
-### **GET `/facegallery/list-faces`**
+### **GET /face-api`/facegallery/list-faces`**
 
 This API gives a list of the registered user.
 
@@ -404,7 +404,7 @@ This API gives a list of the registered user.
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `faces`          | `list`   | List of registered user                                                                                        |
 
-### **POST `/facegallery/verify-face`**
+### **POST /face-api`/facegallery/verify-face`**
 
 This API verifies an user\_id and an image with a registered user or it does 1:1 authentication.
 
