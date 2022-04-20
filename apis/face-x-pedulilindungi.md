@@ -28,17 +28,19 @@ This API registers a user to the database.
   "user_name":        "RisetAi Username1",
   "facegallery_id":   "riset.ai@production",
   "image":            "/9j/4AAQSkZJRgABAQEASABIAAD/4QBMRXhpZgAA...",
-  "trx_id":           "alphanumericalstring1234"
+  "trx_id":           "alphanumericalstring1234",
+  "force_pl":         "false"
 }
 ```
 
-| Key              | Type     | Description                                                                      |
-| ---------------- | -------- | -------------------------------------------------------------------------------- |
-| `nik`            | `string` | NIK number in KTP (must be exactly the same)                                     |
-| `user_name`      | `string` | Name in KTP (must be exactly the same)                                           |
-| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc) |
-| `image`          | `string` | Base64 encoded JPG or PNG image                                                  |
-| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes    |
+| Key              | Type      | Description                                                                                                                                                                                                                                            |
+| ---------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `nik`            | `string`  | NIK number in KTP (must be exactly the same)                                                                                                                                                                                                           |
+| `user_name`      | `string`  | Name in KTP (must be exactly the same)                                                                                                                                                                                                                 |
+| `facegallery_id` | `string`  | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc)                                                                                                                                                                       |
+| `image`          | `string`  | Base64 encoded JPG or PNG image                                                                                                                                                                                                                        |
+| `trx_id`         | `string`  | Unique transaction identifier, for transaction logging and debugging purposes                                                                                                                                                                          |
+| `force_pl`       | `boolean` | If true, register the user, even get an error from the PeduliLindungi server, the user will be registered on the Face Recognition server if it cannot be registered on the PeduliLindungi server, the default value is **false**, **this is optional** |
 
 ### **Response**
 
