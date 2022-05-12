@@ -27,4 +27,4 @@ description: This page contains all of the status codes are used on this API.
 | 493         | Image Error              | `image` error                       |
 | 494         | Image Error              | Cannot decode `source_image` base64 |
 | 495         | Image Error              | `source_image` type not recognized  |
-| 500         | Procedula Error          | Server error                        |
+| 500         | Procedul Error           | Server error                        |
