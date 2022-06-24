@@ -345,6 +345,66 @@ This API registers a user to the database.
 | `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md) |
 
+### **POST /face-api`/facegallery/enroll-face-ktp`**
+
+This API registers a user to the database, while making sure, the user's face is verified with the face inside the provided Identity Card (KTP).
+
+#### **Request**
+
+#### **`Headers`**
+
+| KEY             | VALUE               |
+| --------------- | ------------------- |
+| **Accesstoken** | `oauth Accesstoken` |
+
+#### **`Body`**
+
+```javascript
+{
+  "user_id":                    "risetai1234",
+  "user_name":                  "RisetAi Username1",
+  "facegallery_id":             "riset.ai@production",
+  "image":                      "/9j/4AAQSkZJRgABAQEASABIAAD/4QBMRXhpZgAA...",
+  "trx_id":                     "alphanumericalstring1234",
+  "minimum_confidence_level":   0.8
+}
+```
+
+| Key                           | Type     | Description                                                                      |
+| ----------------              | -------- | -------------------------------------------------------------------------------- |
+| `user_id`                     | `string` | Unique user identifier, alphanumeric (eg. #NIK)                                  |
+| `user_name`                   | `string` | The name of the person who has the `user_id`                                     |
+| `facegallery_id`              | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc) |
+| `image`                       | `string` | Base64 encoded JPG or PNG image                                                  |
+| `trx_id`                      | `string` | Unique transaction identifier, for transaction logging and debugging purposes    |
+| `minimum_confidence_level`    | `float`  | Minimum value for Face and KTP similarity threshold **(optional)**               |
+
+#### **Response**
+
+#### **`Headers`**
+
+| KEY              | VALUE              |
+| ---------------- | ------------------ |
+| **Content-Type** | `application/json` |
+
+#### **`Body`**
+
+```javascript
+{
+  "status":           "200",
+  "status_message":   "Success",
+  "masker":           false,
+  "similarity":       0.95
+}
+```
+
+| Key              | Type     | Description                                                                                                    |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
+| `status_message` | `string` | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md) |
+| `masker`         | `boolean` | If the person’s face is wearing a mask, will return True, else return False                                   |
+| `similarity`     | `float`   | Describe the comparison of facial similarities, scale 0.0 to 1.0 (from 0% to 100% similar)                    |
+
 ### **GET /face-api`/facegallery/list-faces`**
 
 This API gives a list of the registered user.
