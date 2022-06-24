@@ -366,7 +366,7 @@ This API registers a user to the database, while making sure, the user's face is
   "facegallery_id":             "riset.ai@production",
   "image":                      "/9j/4AAQSkZJRgABAQEASABIAAD/4QBMRXhpZgAA...",
   "trx_id":                     "alphanumericalstring1234",
-  "minimum_confidence_level":   0.8
+  "minimum_similarity":         0.8
 }
 ```
 
@@ -377,7 +377,7 @@ This API registers a user to the database, while making sure, the user's face is
 | `facegallery_id`              | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc) |
 | `image`                       | `string` | Base64 encoded JPG or PNG image                                                  |
 | `trx_id`                      | `string` | Unique transaction identifier, for transaction logging and debugging purposes    |
-| `minimum_confidence_level`    | `float`  | Minimum value for Face and KTP similarity threshold **(optional)**               |
+| `minimum_similarity`          | `float`  | Minimum value for Face and KTP similarity threshold **(optional)**               |
 
 #### **Response**
 
