@@ -30,9 +30,9 @@ description: This page contains all of the status codes are used on this API.
 | 500         | Procedul Error           | Server error                                |
 | 600         | Pedulilindungi Error     | Unknown Error                               |
 | 603         | Pedulilindungi Error     | NIK + Name Rejected                         |
-| 604         | Pedulilindungi Error     | Timeout While Waiting For Response          |
+| 604         | Pedulilindungi Error     | Timeout While Waiting for Response          |
 | 605         | Pedulilindungi Error     | Failed To Receive Pedulilindungi Response   |
-| 606         | Pedulilindungi Error     | NIK Haven't Been Enrolled At Pedulilindungi |
+| 606         | Pedulilindungi Error     | NIK Haven't Been Enrolled at Pedulilindungi |
 | 607         | Pedulilindungi Error     | Server Unreachable                          |
 | 608         | Pedulilindungi Error     | Response Data Incomplete                    |
 | 609         | Pedulilindungi Error     | Response Data Malformed                     |
