@@ -637,7 +637,7 @@ This API deletes a user.
 | `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 
-### **POST `/face-apicompare-images`**
+### **POST `/face-api/compare-images`**
 
 This API compares the two images to determine if they are verified or not. This API does not use the information in the database.
 
