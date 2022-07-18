@@ -370,14 +370,14 @@ This API registers a user to the database, while making sure, the user's face is
 }
 ```
 
-| Key                           | Type     | Description                                                                      |
-| ----------------              | -------- | -------------------------------------------------------------------------------- |
-| `user_id`                     | `string` | Unique user identifier, alphanumeric (eg. #NIK)                                  |
-| `user_name`                   | `string` | The name of the person who has the `user_id`                                     |
-| `facegallery_id`              | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc) |
-| `image`                       | `string` | Base64 encoded JPG or PNG image                                                  |
-| `trx_id`                      | `string` | Unique transaction identifier, for transaction logging and debugging purposes    |
-| `minimum_similarity`          | `float`  | Minimum value for Face and KTP similarity threshold **(optional)**               |
+| Key                  | Type     | Description                                                                      |
+| -------------------- | -------- | -------------------------------------------------------------------------------- |
+| `user_id`            | `string` | Unique user identifier, alphanumeric (eg. #NIK)                                  |
+| `user_name`          | `string` | The name of the person who has the `user_id`                                     |
+| `facegallery_id`     | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc) |
+| `image`              | `string` | Base64 encoded JPG or PNG image                                                  |
+| `trx_id`             | `string` | Unique transaction identifier, for transaction logging and debugging purposes    |
+| `minimum_similarity` | `float`  | Minimum value for Face and KTP similarity threshold **(optional)**               |
 
 #### **Response**
 
@@ -398,12 +398,12 @@ This API registers a user to the database, while making sure, the user's face is
 }
 ```
 
-| Key              | Type     | Description                                                                                                    |
-| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
-| `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
-| `status_message` | `string` | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md) |
-| `masker`         | `boolean` | If the person’s face is wearing a mask, will return True, else return False                                   |
-| `similarity`     | `float`   | Describe the comparison of facial similarities, scale 0.0 to 1.0 (from 0% to 100% similar)                    |
+| Key              | Type      | Description                                                                                                    |
+| ---------------- | --------- | -------------------------------------------------------------------------------------------------------------- |
+| `status`         | `string`  | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
+| `status_message` | `string`  | The verbose message of API hit status, please refer to[ List of Status Code](../others/list-of-status-code.md) |
+| `masker`         | `boolean` | If the person’s face is wearing a mask, will return True, else return False                                    |
+| `similarity`     | `float`   | Describe the comparison of facial similarities, scale 0.0 to 1.0 (from 0% to 100% similar)                     |
 
 ### **GET /face-api`/facegallery/list-faces`**
 
@@ -524,7 +524,7 @@ This API verifies an user\_id and an image with a registered user or it does 1:1
 | `masker`         | `boolean` | If a person’s face wearing a mask, will return True, else return False                                       |
 | `verified`       | `boolean` | If similarity above set config parameter(eg. threshold = 0.75), return True, else return False               |
 
-### **POST `/facegallery/identify-face`**
+### **POST `/`face-api`/facegallery/identify-face`**
 
 This API identify an image with a registered user or it do 1:N authentication.
 
@@ -587,7 +587,7 @@ This API identify an image with a registered user or it do 1:N authentication.
 | `user_id`          | `string`  | Unique user identifier, alphanumeric (eg. #NIK)                                                              |
 | `user_name`        | `string`  | The name of the person who has the `user_id`                                                                 |
 
-### **DELETE `/facegallery/delete-face`**
+### **DELETE `/`face-api/`facegallery/delete-face`**
 
 This API deletes a user.
 
@@ -637,7 +637,7 @@ This API deletes a user.
 | `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 
-### **POST `/compare-images`**
+### **POST `/`face-api/`compare-images`**
 
 This API compares the two images to determine if they are verified or not. This API does not use the information in the database.
 
