@@ -14,13 +14,11 @@ To provide more accuracy and precision of facial comparison results, we recommen
 * Use images that are bright and sharp.
 * Use images that have sufficient contrast with the background. A high-contrast monochrome background works well.
 * The minimum face resolution is 150 x 150 pixels. Higher-resolution images require a larger minimum face size.
-* Format image: JPG \(JPEG\) and PNG.
+* Format image: JPG (JPEG) and PNG.
 
-![Reccommended Reference Image](../.gitbook/assets/recc.png)
+![Recommended Reference Image](<../.gitbook/assets/Reccomended Reference.jpg>)
 
-![Unreccommended Reference Image](../.gitbook/assets/unrecc.png)
+![Unrecommended Reference Image](<../.gitbook/assets/Unreccomended Reference.jpg>)
 
-![Image Reccomendations](../.gitbook/assets/image-res.png)
-
-
+![Image Recommendations](../.gitbook/assets/image-res.png)
 
