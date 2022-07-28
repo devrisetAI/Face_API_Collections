@@ -463,6 +463,8 @@ This API gives a list of the registered user.
 | `status`         | `string` | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md)   |
 | `status_message` | `string` | The verbose message of API hit status, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `faces`          | `list`   | List of registered user                                                                                        |
+| `faces.user_id`          | `string`   | registered face's userid                                                                             |
+| `faces.user_name`          | `string`   | registered face's username                                                                         |
 
 ### **POST `/face-api/facegallery/verify-face`**
 
@@ -582,10 +584,11 @@ This API identify an image with a registered user or it do 1:N authentication.
 | ------------------ | --------- | ------------------------------------------------------------------------------------------------------------ |
 | `status`           | `string`  | Describing the condition of API hit, please refer to [List of Status Code](../others/list-of-status-code.md) |
 | `status_message`   | `string`  | The verbose message of API hit status, please refer to [List Status Code](../others/list-of-status-code.md)  |
-| `confidence_level` | `float`   | Describe confidence of model, scale 0.0 to 1.0 (from 0% to 100% confidence)                                  |
-| `mask`             | `boolean` | If a person’s face wearing a mask, will return True, else return False                                       |
-| `user_id`          | `string`  | Unique user identifier, alphanumeric (eg. #NIK)                                                              |
-| `user_name`        | `string`  | The name of the person who has the `user_id`                                                                 |
+| `return`   | `list`  | List of identified face. Will only return 1 face, for now  |
+| `return.confidence_level` | `float`   | Describe confidence of model, scale 0.0 to 1.0 (from 0% to 100% confidence)                                  |
+| `return.mask`             | `boolean` | If a person’s face wearing a mask, will return True, else return False                                       |
+| `return.user_id`          | `string`  | Unique user identifier, alphanumeric (eg. #NIK)                                                              |
+| `return.user_name`        | `string`  | The name of the person who has the `user_id`                                                                 |
 
 ### **DELETE `/face-api/facegallery/delete-face`**
 
