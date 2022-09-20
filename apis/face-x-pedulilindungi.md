@@ -27,9 +27,10 @@ This API registers a user to the database.
   "nik":              "3273022807762",
   "user_name":        "RisetAi Username1",
   "facegallery_id":   "riset.ai@production",
+  "force_register":   true,
   "image":            "/9j/4AAQSkZJRgABAQEASABIAAD/4QBMRXhpZgAA...",
   "trx_id":           "alphanumericalstring1234",
-  "force_pl":         "false"
+  "force_pl":         false
 }
 ```
 
@@ -38,6 +39,7 @@ This API registers a user to the database.
 | `nik`            | `string`  | NIK number in KTP (must be exactly the same)                                                                                                                                                                                                           |
 | `user_name`      | `string`  | Name in KTP (must be exactly the same)                                                                                                                                                                                                                 |
 | `facegallery_id` | `string`  | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc)                                                                                                                                                                       |
+| `force_register` | `bool`   | Specify whether or not to force register when Face is too small (defaults to `false` when not specified) |
 | `image`          | `string`  | Base64 encoded JPG or PNG image                                                                                                                                                                                                                        |
 | `trx_id`         | `string`  | Unique transaction identifier, for transaction logging and debugging purposes                                                                                                                                                                          |
 | `force_pl`       | `boolean` | If true, register the user, even get an error from the PeduliLindungi server, the user will be registered on the Face Recognition server if it cannot be registered on the PeduliLindungi server, the default value is **false**, **this is optional** |
