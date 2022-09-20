@@ -310,6 +310,7 @@ This API registers a user to the database.
   "user_id":          "risetai1234",
   "user_name":        "RisetAi Username1",
   "facegallery_id":   "riset.ai@production",
+  "force_register":   true,
   "image":            "/9j/4AAQSkZJRgABAQEASABIAAD/4QBMRXhpZgAA...",
   "trx_id":           "alphanumericalstring1234"
 }
@@ -320,6 +321,7 @@ This API registers a user to the database.
 | `user_id`        | `string` | Unique user identifier, alphanumeric (eg. #NIK)                                  |
 | `user_name`      | `string` | The name of the person who has the `user_id`                                     |
 | `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc) |
+| `force_register` | `bool`   | Specify whether or not to force register when Face is too small (defaults to `false` when not specified) |
 | `image`          | `string` | Base64 encoded JPG or PNG image                                                  |
 | `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes    |
 
