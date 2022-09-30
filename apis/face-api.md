@@ -111,7 +111,7 @@ This API fetches the client's API counters remaining quota (API Hits, Num Faces 
 
 | Key      | Type     | Description                                                                   |
 | -------- | -------- | ----------------------------------------------------------------------------- |
-| `trx_id` | `string` | Unique transaction identifier, for transaction logging and debugging purposes. Max 120 chars   |
+| `trx_id` | `string` | Unique transaction identifier, for transaction logging and debugging purposes. **⚠WARNING** Max 120 chars   |
 
 #### **Response**
 
@@ -212,8 +212,8 @@ This API creates the new face gallery.
 
 | Key              | Type     | Description                                                                   |
 | ---------------- | -------- | ----------------------------------------------------------------------------- |
-| `facegallery_id` | `string` | Name of facegallery. Max 120 chars                                                             |
-| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. Max 120 chars   |
+| `facegallery_id` | `string` | Name of facegallery. **⚠WARNING** Max 120 chars                                                             |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. **⚠WARNING** Max 120 chars   |
 
 #### **Response**
 
@@ -262,8 +262,8 @@ This API deletes a facegallery.
 
 | Key              | Type     | Description                                                                   |
 | ---------------- | -------- | ----------------------------------------------------------------------------- |
-| `facegallery_id` | `string` | Name of facegallery. Max 120 chars                                                             |
-| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. Max 120 chars   |
+| `facegallery_id` | `string` | Name of facegallery. **⚠WARNING** Max 120 chars                                                             |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. **⚠WARNING** Max 120 chars   |
 
 #### **Response**
 
@@ -318,12 +318,12 @@ This API registers a user to the database.
 
 | Key              | Type     | Description                                                                      |
 | ---------------- | -------- | -------------------------------------------------------------------------------- |
-| `user_id`        | `string` | Unique user identifier, alphanumeric (eg. #NIK). Max 120 chars                                  |
-| `user_name`      | `string` | The name of the person who has the `user_id`. Max 120 chars                                       |
-| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc). Max 120 chars   |
+| `user_id`        | `string` | Unique user identifier, alphanumeric (eg. #NIK). **⚠WARNING** Max 120 chars                                  |
+| `user_name`      | `string` | The name of the person who has the `user_id`. **⚠WARNING** Max 120 chars                                       |
+| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc). **⚠WARNING** Max 120 chars   |
 | `force_register` | `bool`   | Specify whether or not to force register when Face is too small (defaults to `false` when not specified) |
 | `image`          | `string` | Base64 encoded JPG or PNG image                                                  |
-| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. Max 120 chars      |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. **⚠WARNING** Max 120 chars      |
 
 #### **Response**
 
@@ -374,11 +374,11 @@ This API registers a user to the database, while making sure, the user's face is
 
 | Key                  | Type     | Description                                                                      |
 | -------------------- | -------- | -------------------------------------------------------------------------------- |
-| `user_id`            | `string` | Unique user identifier, alphanumeric (eg. #NIK). Max 120 chars                                    |
-| `user_name`          | `string` | The name of the person who has the `user_id`. Max 120 chars                                       |
-| `facegallery_id`     | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc). Max 120 chars   |
+| `user_id`            | `string` | Unique user identifier, alphanumeric (eg. #NIK). **⚠WARNING** Max 120 chars                                    |
+| `user_name`          | `string` | The name of the person who has the `user_id`. **⚠WARNING** Max 120 chars                                       |
+| `facegallery_id`     | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc). **⚠WARNING** Max 120 chars   |
 | `image`              | `string` | Base64 encoded JPG or PNG image                                                  |
-| `trx_id`             | `string` | Unique transaction identifier, for transaction logging and debugging purposes. Max 120 chars      |
+| `trx_id`             | `string` | Unique transaction identifier, for transaction logging and debugging purposes. **⚠WARNING** Max 120 chars      |
 | `minimum_similarity` | `float`  | Minimum value for Face and KTP similarity threshold **(optional)**               |
 
 #### **Response**
@@ -430,8 +430,8 @@ This API gives a list of the registered user.
 
 | Key              | Type     | Description                                                                      |
 | ---------------- | -------- | -------------------------------------------------------------------------------- |
-| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc). Max 120 chars   |
-| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. Max 120 chars      |
+| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc). **⚠WARNING** Max 120 chars   |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. **⚠WARNING** Max 120 chars      |
 
 #### **Response**
 
@@ -493,10 +493,10 @@ This API verifies an user\_id and an image with a registered user or it does 1:1
 
 | Key              | Type     | Description                                                                      |
 | ---------------- | -------- | -------------------------------------------------------------------------------- |
-| `user_id`        | `string` | Unique user identifier, alphanumeric (eg. #NIK). Max 120 chars                                    |
-| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc). Max 120 chars   |
+| `user_id`        | `string` | Unique user identifier, alphanumeric (eg. #NIK). **⚠WARNING** Max 120 chars                                    |
+| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc). **⚠WARNING** Max 120 chars   |
 | `image`          | `string` | Base64 encoded JPG or PNG image                                                  |
-| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. Max 120 chars      |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. **⚠WARNING** Max 120 chars      |
 
 #### **Response**
 
@@ -552,9 +552,9 @@ This API identify an image with a registered user or it do 1:N authentication.
 
 | Key              | Type     | Description                                                                      |
 | ---------------- | -------- | -------------------------------------------------------------------------------- |
-| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc). Max 120 chars   |
+| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc). **⚠WARNING** Max 120 chars   |
 | `image`          | `string` | Base64 encoded JPG or PNG image                                                  |
-| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. Max 120 chars      |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. **⚠WARNING** Max 120 chars      |
 
 #### **Response**
 
@@ -616,9 +616,9 @@ This API deletes a user.
 
 | Key              | Type     | Description                                                                      |
 | ---------------- | -------- | -------------------------------------------------------------------------------- |
-| `user_id`        | `string` | Unique user identifier, alphanumeric (eg. #NIK). Max 120 chars                                    |
-| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc). Max 120 chars   |
-| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. Max 120 chars      |
+| `user_id`        | `string` | Unique user identifier, alphanumeric (eg. #NIK). **⚠WARNING** Max 120 chars                                    |
+| `facegallery_id` | `string` | Unique FaceGallery identifier, alphanumeric (eg. LocationName, CompanyName, etc). **⚠WARNING** Max 120 chars   |
+| `trx_id`         | `string` | Unique transaction identifier, for transaction logging and debugging purposes. **⚠WARNING** Max 120 chars      |
 
 #### **Response**
 
@@ -668,7 +668,7 @@ This API compares the two images to determine if they are verified or not. This 
 | -------------- | -------- | ----------------------------------------------------------------------------- |
 | `source_image` | `string` | Base64 encoded JPG or PNG of compared image                                   |
 | `target_image` | `string` | Base64 encoded JPG or PNG of the reference image                              |
-| `trx_id`       | `string` | Unique transaction identifier, for transaction logging and debugging purposes. Max 120 chars   |
+| `trx_id`       | `string` | Unique transaction identifier, for transaction logging and debugging purposes. **⚠WARNING** Max 120 chars   |
 
 #### **Response**
 
