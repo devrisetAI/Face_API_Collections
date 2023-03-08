@@ -12,7 +12,8 @@
 * [AuthTenant](authtenant.md)
 * [APIs](apis/README.md)
   * [Face API](apis/face-api.md)
-  * [Face X PeduliLindungi API](apis/face-x-pedulilindungi.md)
+  # PL / PeduliLindungi is no longer maintained
+  # * [Face X PeduliLindungi API](apis/face-x-pedulilindungi.md)
   * [Liveness API](apis/liveness-api.md)
 * [Others](others/README.md)
   * [List of Status Code](others/list-of-status-code.md)
